@@ -1,6 +1,6 @@
 ---
 title: Mac神器-BTT(BetterTouchTool)不完全教程
-permalink: Mac神器-BTT(BetterTouchTool)不完全教程
+permalink: Mac-BetterTouchTool
 date: 2017-12-13 17:04:25
 categories:
 - 工具
