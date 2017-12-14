@@ -83,3 +83,4 @@ tags:
 55. {% post_link  linux-command（55）-crontab %}
 56. {% post_link  linux-command（56）-tailf %}
 57. {% post_link  linux-command（57）-sftp %}
+58. {% post_link  linux-command（58）-sort %}
