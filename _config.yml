@@ -66,6 +66,10 @@ pagination_dir: page
 plugin:
 - hexo-generator-feed
 - hexo-generator-sitemap
+search:
+  path: search.xml
+  field: post
+  limit: 1000
 #Feed Atom
 feed:
 type: atom
