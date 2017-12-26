@@ -69,7 +69,6 @@ plugin:
 search:
   path: search.xml
   field: post
-  limit: 1000
 #Feed Atom
 feed:
 type: atom
