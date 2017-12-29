@@ -166,7 +166,7 @@ tags:
 - 3-hexo
 ---
 ```
-### 写作技巧
+### 写作
 1.设置模板，blog根目录 `scaffolds/post.md`
 加入categories,tags等，这样以后通过 `hexo new` 生成的模板就不用写这两个单词了。
 当然，你也可以写入任何你每个文章中都会有的部分。
@@ -178,7 +178,9 @@ categories:
 tags:
 ---
 ```
-2.设置脚本命令
+
+## 技巧
+### 快捷命令
 其实就通过alias，触发一些命令的集合
 在 `~/.bashrc` 文件中添加
 ```bash
@@ -186,3 +188,15 @@ alias hs='hexo clean && hexo g && hexo s'  #启动本地服务
 alias hd='hexo clean && hexo g && hexo d'  #部署博客
 ```
 甚至你也可以加入备份文章的命令，可以自由发挥。
+
+### 博客备份（快捷命令升级版）
+为了保证我们写的文章不丢失、快速迁移博客，都需要备份我们的blog。
+1. 博客根目录，执行 `git init` 创建 git 仓库。
+2. 在 github（或其他托管平台、自建远程仓库等） 创建仓库并和本地仓库建立联系。
+3. 在 `~/.bashrc` 文件中添加
+```bash
+alias hs='hexo clean && hexo g && hexo s'
+alias hd='hexo clean && hexo g && hexo d && git add . && git commit -m "update" && git push -f'
+```
+
+这样，我们在执行 `hd` 进行部署时，就一同将博客进行备份了
