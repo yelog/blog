@@ -28,8 +28,8 @@ $("input[type=checkbox]:checked").length     //获取被选中checkbox的数量
 $("input[type=checkbox]:first").prop("checked")               //判断第一个checkbox是否被选中
 $("input[type=checkbox]:first").prop("checkbox",true)         //选中第一个checkbox
 
-$("input[type=checkbox]:not(:checked)").prop("checkbox",true) //全选
-$("input[type=checkbox]:checkbox").prop("checkbox",false)     //都不选中
+$("input[type=checkbox]:not(:checked)").prop("checked",true) //全选
+$("input[type=checkbox]:checkbox").prop("checked",false)     //都不选中
 
 //反选
 $("input[type=checkbox]").each(function(){
