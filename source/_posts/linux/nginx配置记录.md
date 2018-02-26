@@ -20,7 +20,7 @@ tags:
 
 上面这个页面有相关的配置信息，下面简单介绍：
 
-① 将下载文件中的 `*.pem`、`*.key`, 拷贝到 nginx 目录下 的 `cert` 当然也可以是其他目录
+① 将下载文件中的 `*.pem`、`*.key`, 拷贝到 nginx 目录下 的 `cert` , 当然也可以是其他目录
 ② 修改 `nginx.conf`
 ```conf
 server {
@@ -50,3 +50,4 @@ server {
   }
 ```
 ③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务
+![通过https访问](http://oncj6b2vl.bkt.clouddn.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png)
