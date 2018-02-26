@@ -28,6 +28,7 @@ skip_render:
 - 'tableGenerate/**'
 - 'google61ecfa7ad9c1b2c1.html'
 - 'daka/**'
+- 'layui-select-multiple/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
