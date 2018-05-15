@@ -8,7 +8,7 @@ tags:
 - 浏览器
 - js
 originView: 浏览器前进/后退缓存（BF Cache）
-origin: http://harttle.com/2017/03/12/backward-forward-cache.html
+originUrl: http://harttle.com/2017/03/12/backward-forward-cache.html
 ---
 <hr>
 [浏览器前进/后退缓存](https://developer.mozilla.org/en-US/docs/Working_with_BFCache)（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。

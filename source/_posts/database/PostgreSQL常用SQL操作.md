@@ -1,13 +1,14 @@
 ---
-title: 常用SQL操作
-permalink: sql-use
+title: PostgreSQL常用SQL操作
+permalink: postgres-sql-use
 date: 2017-04-14 16:37:24
 categories:
 - 数据库
 tags:
+- postgres
 - sql
 ---
->说明：文章中实例均在 `postgreSQL` 环境操作。
+>说明：文章中实例均在 `PostgreSQL` 环境操作。
 
 ## DDL数据定义语言
 ### 数据库/角色/schema

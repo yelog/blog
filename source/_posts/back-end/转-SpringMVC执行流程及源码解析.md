@@ -9,7 +9,7 @@ tags:
 - spring
 - springmvc
 originView: SpringMVC执行流程及源码解析
-origin: http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
+originUrl: http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/
 ---
 在SpringMVC中主要是围绕着DispatcherServlet来设计，可以把它当做指挥中心。这里先说明一下SpringMVC文档给出的执行流程，然后是我们稍微具体的执行流程，最后是流程大致的源码跟踪。关于很很很详细的源码解析，这里暂先不做。
 ## 官方文档中的流程

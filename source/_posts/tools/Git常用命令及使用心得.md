@@ -7,7 +7,7 @@ categories:
 tags:
 - Git
 originView: 常用Git 命令清单- 阮一峰的网络日志
-origin: http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
+originUrl: http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
 ---
 经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络）
 

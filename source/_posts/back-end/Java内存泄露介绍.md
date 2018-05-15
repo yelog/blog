@@ -7,8 +7,6 @@ categories:
 tags:
 - java
 - translation
-originView: The Introduction of Java Memory Leaks
-origin: http://www.programcreek.com/2013/10/the-introduction-of-memory-leak-what-why-and-how/
 ---
 内存管理是Java最大的优势之一；你可以很简单的创建一个对象，内存的分配和释放则交给Java垃圾收集器处理；然而实际情况并非如此简单，因为在Java应用程序中会频繁的发生内存泄露。
 

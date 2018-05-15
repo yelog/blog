@@ -6,7 +6,7 @@ categories: 后端
 tags:
 - java
 originView: 谈谈Java中的语法糖
-origin: http://blog.csdn.net/danchu/article/details/54986442
+originUrl: http://blog.csdn.net/danchu/article/details/54986442
 ---
 >语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，只是为了方便程序员的开发，提高开发效率。说白了，语法糖就是对现有语法的一个封装。
 

@@ -7,7 +7,7 @@ categories:
 tags:
 - firewall
 originView: CentOS 7 下使用 Firewall - Havee's Space
-origin: http://havee.me/linux/2015-01/using-firewalls-on-centos-7.html
+originUrl: http://havee.me/linux/2015-01/using-firewalls-on-centos-7.html
 ---
 ## 介绍
 FirewallD 提供了支持网络/防火墙区域(zone)定义网络链接以及接口安全等级的动态防火墙管理工具。它支持 IPv4, IPv6 防火墙设置以及以太网桥接，并且拥有运行时配置和永久配置选项。它也支持允许服务或者应用程序直接添加防火墙规则的接口。
