@@ -392,3 +392,6 @@ test2.sh
 echo $name
 ```
 >注：被包含的文件 test1.sh 不需要可执行权限。
+
+## reference:
+[1] http://www.runoob.com/linux/linux-shell.html
