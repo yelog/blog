@@ -25,7 +25,7 @@ else
 fi
 ```
 却出现了错乱,如下图所示
-![缩进乱掉](http://oncj6b2vl.bkt.clouddn.com/FoIefs-sorNDjfPD69gH05is3tc5.png)
+![缩进乱掉](http://img.xiangzhangshugongyi.com/FoIefs-sorNDjfPD69gH05is3tc5.png)
 
 ## 分析
 vim 没有相应的程序来处理这个从其他应用复制粘贴的过程，所以Vim通过插入键盘输入的buffer来模拟这个粘贴的过程，这个时候Vim会以为这是用户输入的。
@@ -41,6 +41,6 @@ vim 没有相应的程序来处理这个从其他应用复制粘贴的过程，�
 # 退出 paste 模式
 :set nopaste
 ```
-![缩进正常](http://oncj6b2vl.bkt.clouddn.com/FpHOECFUPpgkJBKhKE_wcRYvPJ81.png)
+![缩进正常](http://img.xiangzhangshugongyi.com/FpHOECFUPpgkJBKhKE_wcRYvPJ81.png)
 
 如果不想每次都执行这个命令，可以在 `～/.vimrc` 中添加一行配置 `set pastetoggle=<F12>` ，这样就可以通过F12快速在paste模式中切换。

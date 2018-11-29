@@ -9,14 +9,14 @@ tags:
 ## 启用https
 ### 1.购买免费证书
 登录阿里云 -> 控制台 -> 安全（云盾） -> CA证书服务 -> 购买证书
-![购买免费证书](http://oncj6b2vl.bkt.clouddn.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png)
+![购买免费证书](http://img.xiangzhangshugongyi.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png)
 
 ### 2.补全证书信息
 点击补全，绑定域名
 
 ### 3.下载并配置
 选择下载 证书for nginx
-![下载证书](http://oncj6b2vl.bkt.clouddn.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png)
+![下载证书](http://img.xiangzhangshugongyi.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png)
 
 上面这个页面有相关的配置信息，下面简单介绍：
 
@@ -50,4 +50,4 @@ server {
   }
 ```
 ③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务
-![通过https访问](http://oncj6b2vl.bkt.clouddn.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png)
+![通过https访问](http://img.xiangzhangshugongyi.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png)

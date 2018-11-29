@@ -42,9 +42,9 @@ docker run -d --privileged --hostname tale --name tale \
 
 ### 访问
 浏览器进入 `127.0.0.1` 即可访问
-![管理后台](http://oncj6b2vl.bkt.clouddn.com/FtwT7OgspZR3YjpJhH5VSuUmnLjP.png)
-![首页](http://oncj6b2vl.bkt.clouddn.com/FnFBhuwvQ4atG2F2ahdj5PSFF3eL.png)
-![文章](http://oncj6b2vl.bkt.clouddn.com/Fg1891hUmEATDbFDBgdBsncb4U1U.png)
+![管理后台](http://img.xiangzhangshugongyi.com/FtwT7OgspZR3YjpJhH5VSuUmnLjP.png)
+![首页](http://img.xiangzhangshugongyi.com/FnFBhuwvQ4atG2F2ahdj5PSFF3eL.png)
+![文章](http://img.xiangzhangshugongyi.com/Fg1891hUmEATDbFDBgdBsncb4U1U.png)
 
 ## 体验
 ### 管理后台

@@ -25,7 +25,7 @@ tags:
 
 ## 安装hexo
 在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图
-![鼠标右键](http://oncj6b2vl.bkt.clouddn.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png)
+![鼠标右键](http://img.xiangzhangshugongyi.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png)
 在打开的命令窗内输入下面的命令进行安装
 ```bash
 npm install hexo-cli -g

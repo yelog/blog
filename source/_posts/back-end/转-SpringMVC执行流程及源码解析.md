@@ -14,7 +14,7 @@ originUrl: http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%
 在SpringMVC中主要是围绕着DispatcherServlet来设计，可以把它当做指挥中心。这里先说明一下SpringMVC文档给出的执行流程，然后是我们稍微具体的执行流程，最后是流程大致的源码跟踪。关于很很很详细的源码解析，这里暂先不做。
 ## 官方文档中的流程
 首先看下SpringMVC文档上给的流程图：
-![官方流程图](http://oncj6b2vl.bkt.clouddn.com/DispatcherServlet.png)
+![官方流程图](http://img.xiangzhangshugongyi.com/DispatcherServlet.png)
 这张图片给了我们大概的执行流程：
 1. 用户请求首先发送到前端控制器DispatcherServlet，DispatcherServlet根据请求的信息来决定使用哪个页面控制器Controller（也就是我们通常编写的Controller）来处理该请求。找到控制器之后，DispatcherServlet将请求委托给控制器去处理。
 2. 接下来页面控制器开始处理用户请求，页面控制器会根据请求信息进行处理，调用业务层等等，处理完成之后，会把结果封装成一个ModelAndView返回给DispatcherServlet。

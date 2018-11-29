@@ -27,11 +27,11 @@ keysym Escape = Caps_Lock
 ## 二、 将 右alt 改为 ctrl
 ①. 查看需要修改键位的 keysym
 通过 `xev | grep keycode` 获取右 `alt` 的 keysym 为 `Alt_R`。如下图所示：
-![通过xev获取右alt的keysym](http://oncj6b2vl.bkt.clouddn.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png)
+![通过xev获取右alt的keysym](http://img.xiangzhangshugongyi.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png)
 
 ②. 查看 `Alt_R` 是哪个 modifier 使用的
 通过 `xmodmap -pm` 查看，发现 `Alt_R` 是作为 modifier `mod1` 使用的。如下图所示：
-![查看 Alt_R 是作为 mode1 使用的](http://oncj6b2vl.bkt.clouddn.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png)
+![查看 Alt_R 是作为 mode1 使用的](http://img.xiangzhangshugongyi.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png)
 
 ③. 修改 modifier
 ```bash

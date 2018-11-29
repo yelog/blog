@@ -29,4 +29,4 @@ date: 2016-09-27 11:31:01
  ### 效果
  > <http://yelog.org/举个404例子>
 
- ![404](http://oncj6b2vl.bkt.clouddn.com/FjSPGVPAu_7d0aMPqErpI1HN_985.png)
+ ![404](http://img.xiangzhangshugongyi.com/FjSPGVPAu_7d0aMPqErpI1HN_985.png)

@@ -61,7 +61,7 @@ link:
 comment_count: true
 # 文章标题下方显示评论数
 ```
-![开启效果](http://oncj6b2vl.bkt.clouddn.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png)
+![开启效果](http://img.xiangzhangshugongyi.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png)
 
 ### 评论区预加载
 开启设置 `_config.yml`
@@ -71,7 +71,7 @@ preload_comment: false
 1. false: 当点击评论条等区域时再加载评论模块
 2. true: 页面加载时加载评论区
 
-![关闭效果](http://oncj6b2vl.bkt.clouddn.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png)
+![关闭效果](http://img.xiangzhangshugongyi.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png)
 
 ## 样式设置
 ### 代码高亮

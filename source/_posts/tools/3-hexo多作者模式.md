@@ -35,10 +35,10 @@ tags:
 ---
 ```
 **效果：**
-![](http://oncj6b2vl.bkt.clouddn.com/Fjq0M7pBzl6fsnC3ivpqMsdLdXc0.png)
+![](http://img.xiangzhangshugongyi.com/Fjq0M7pBzl6fsnC3ivpqMsdLdXc0.png)
 
 ## 搜索某个作者的所有文章
 在搜索栏中输入`@小马哥`就可以显示出所有小马哥的文章。
 如果你在_config.xml中配置了作者名，就可以出现`提示`,具体看第一部分
 **效果如下：**
-![](http://oncj6b2vl.bkt.clouddn.com/Fm2PK5W9Rd6ojYq055zZoWcbioAn.gif)
+![](http://img.xiangzhangshugongyi.com/Fm2PK5W9Rd6ojYq055zZoWcbioAn.gif)

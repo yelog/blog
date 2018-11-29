@@ -68,23 +68,23 @@ $ tree
 
 ## 工作流程
 Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录项目的快照。
-![工作流程](http://oncj6b2vl.bkt.clouddn.com/FuPJ7H7NQ32SfOF8kjbnzLk6vmEH.png)
+![工作流程](http://img.xiangzhangshugongyi.com/FuPJ7H7NQ32SfOF8kjbnzLk6vmEH.png)
 让我们来可视化这个过程：假设我们进入到一个新目录，其中有一个文件。 我们称其为该文件的 **v1** 版本，将它标记为蓝色。 现在运行 `git init`，这会创建一个 Git 仓库，其中的 HEAD 引用指向未创建的分支（`master` 还不存在）。
-![git初始化情况](http://oncj6b2vl.bkt.clouddn.com/FrD7WIEaHU-3MqVa7jIeHVh_j2sf.png)
+![git初始化情况](http://img.xiangzhangshugongyi.com/FrD7WIEaHU-3MqVa7jIeHVh_j2sf.png)
 此时，只有工作目录有内容。
 
 现在我们想要提交这个文件，所以用 `git add` 来获取工作目录中的内容，并将其复制到索引中。
-![git add之后情况](http://oncj6b2vl.bkt.clouddn.com/Fqoqvx7xoY0Ok-U_dSUNdPcrk43t.png)
+![git add之后情况](http://img.xiangzhangshugongyi.com/Fqoqvx7xoY0Ok-U_dSUNdPcrk43t.png)
 接着运行 `git commit`，它首先会移除索引中的内容并将它保存为一个永久的快照，然后创建一个指向该快照的提交对象，最后更新 `master` 来指向本次提交。
-![git commit之后情况](http://oncj6b2vl.bkt.clouddn.com/FqPDbSnfFD3LM_3-tSY7OLwtCGSa.png)
+![git commit之后情况](http://img.xiangzhangshugongyi.com/FqPDbSnfFD3LM_3-tSY7OLwtCGSa.png)
 此时如果我们运行 `git status`，会发现没有任何改动，因为现在三棵树完全相同。
 
 现在我们想要对文件进行修改然后提交它。 我们将会经历同样的过程；首先在工作目录中修改文件。 我们称其为该文件的 **v2** 版本，并将它标记为红色。
-![编辑文件](http://oncj6b2vl.bkt.clouddn.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png)
+![编辑文件](http://img.xiangzhangshugongyi.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png)
 如果现在运行 `git status`，我们会看到文件显示在 “Changes not staged for commit,” 下面并被标记为红色，因为该条目在索引与工作目录之间存在不同。 接着我们运行 `git add` 来将它暂存到索引中。
-![git add之后情况](http://oncj6b2vl.bkt.clouddn.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png)
+![git add之后情况](http://img.xiangzhangshugongyi.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png)
 此时，由于索引和 HEAD 不同，若运行 `git status` 的话就会看到 “Changes to be committed” 下的该文件变为绿色 ——也就是说，现在预期的下一次提交与上一次提交不同。 最后，我们运行 `git commit` 来完成提交。
-![git add之后情况](http://oncj6b2vl.bkt.clouddn.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png)
+![git add之后情况](http://img.xiangzhangshugongyi.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png)
 现在运行 `git status` 会没有输出，因为三棵树又变得相同了。
 
 切换分支或克隆的过程也类似。 当检出一个分支时，它会修改 **HEAD** 指向新的分支引用，将 **索引** 填充为该次提交的快照，然后将 **索引** 的内容复制到 工作目录 中。
@@ -93,11 +93,11 @@ Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录�
 在以下情景中观察 `reset` 命令会更有意义。
 
 为了演示这些例子，假设我们再次修改了 `file.txt` 文件并第三次提交它。 现在的历史看起来是这样的：
-![](http://oncj6b2vl.bkt.clouddn.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png)
+![](http://img.xiangzhangshugongyi.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png)
 让我们跟着 `reset` 看看它都做了什么。 它以一种简单可预见的方式直接操纵这三棵树。 它做了三个基本操作。
 ### 1.移动 HEAD
 `reset` 做的第一件事是移动 HEAD 的指向。 这与改变 HEAD 自身不同（`checkout` 所做的）；`reset` 移动 HEAD 指向的分支。 这意味着如果 HEAD 设置为 `master` 分支（例如，你正在 `master` 分支上），运行 `git reset 9e5e64a` 将会使 `master` 指向 `9e5e64a`。
-![git reset --soft](http://oncj6b2vl.bkt.clouddn.com/FnlCclgtQ-6JbFSLYJ5aOzZCY7Re.png)
+![git reset --soft](http://img.xiangzhangshugongyi.com/FnlCclgtQ-6JbFSLYJ5aOzZCY7Re.png)
 无论你调用了何种形式的带有一个提交的 `reset`，它首先都会尝试这样做。 使用 `reset --soft`，它将仅仅停在那儿。
 
 现在看一眼上图，理解一下发生的事情：它本质上是撤销了上一次 `git commit` 命令。 当你在运行 `git commit` 时，Git 会创建一个新的提交，并移动 HEAD 所指向的分支来使其指向该提交。 当你将它 `reset` 回 `HEAD~`（HEAD 的父结点）时，其实就是把该分支移动回原来的位置，而不会改变索引和工作目录。 现在你可以更新索引并再次运行 `git commit` 来完成 `git commit --amend` 所要做的事情了。
@@ -106,14 +106,14 @@ Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录�
 注意，如果你现在运行 `git status` 的话，就会看到新的 HEAD 和以绿色标出的它和索引之间的区别。
 
 接下来，`reset` 会用 HEAD 指向的当前快照的内容来更新索引。
-![git reset --mixed](http://oncj6b2vl.bkt.clouddn.com/Fp_egv7ERkdtOGOcillcEgBnvFh7.png)
+![git reset --mixed](http://img.xiangzhangshugongyi.com/Fp_egv7ERkdtOGOcillcEgBnvFh7.png)
 如果指定 `--mixed` 选项，`reset` 将会在这时停止。 这也是默认行为，所以如果没有指定任何选项（在本例中只是 `git reset HEAD~`），这就是命令将会停止的地方。
 
 现在再看一眼上图，理解一下发生的事情：它依然会撤销一上次 提交，但还会 取消暂存 所有的东西。 于是，我们回滚到了所有 `git add` 和 `git commit` 的命令执行之前。
 
 ### 3.更新工作目录
 `reset` 要做的的第三件事情就是让工作目录看起来像索引。 如果使用 --hard 选项，它将会继续这一步。
-![git reset --hard](http://oncj6b2vl.bkt.clouddn.com/FisVYp5vIOXZTy1w9t_NPBcHdr8h.png)
+![git reset --hard](http://img.xiangzhangshugongyi.com/FisVYp5vIOXZTy1w9t_NPBcHdr8h.png)
 现在让我们回想一下刚才发生的事情。 你撤销了最后的提交、`git add` 和 `git commit` 命令以及工作目录中的所有工作。
 
 必须注意，`--hard` 标记是 `reset` 命令唯一的危险用法，它也是 Git 会真正地销毁数据的仅有的几个操作之一。 其他任何形式的 reset 调用都可以轻松撤消，但是 `--hard` 选项不能，因为它强制覆盖了工作目录中的文件。 在这种特殊情况下，我们的 Git 数据库中的一个提交内还留有该文件的 **v3** 版本，我们可以通过 `reflog` 来找回它。但是若该文件还未提交，Git 仍会覆盖它从而导致无法恢复。
@@ -132,14 +132,14 @@ reset 命令会以特定的顺序重写这三棵树，在你指定以下选项�
 2. 让索引看起来像 HEAD （到此处停止）
 
 所以它本质上只是将 `file.txt` 从 HEAD 复制到索引中。
-![git reset](http://oncj6b2vl.bkt.clouddn.com/FnXU5yA8N-Xjt7dTPqD0U6ZuNmkf.png)
+![git reset](http://img.xiangzhangshugongyi.com/FnXU5yA8N-Xjt7dTPqD0U6ZuNmkf.png)
 它还有 *取消暂存文件* 的实际效果。 如果我们查看该命令的示意图，然后再想想 `git add` 所做的事，就会发现它们正好相反。
-![git add](http://oncj6b2vl.bkt.clouddn.com/FsgUtPndZWzdhH1uYJLmX6ts7k99.png)
+![git add](http://img.xiangzhangshugongyi.com/FsgUtPndZWzdhH1uYJLmX6ts7k99.png)
 
 这就是为什么 `git status` 命令的输出会建议运行此命令来取消暂存一个文件。 （查看 取消暂存的文件 来了解更多。）
 
 我们可以不让 Git 从 HEAD 拉取数据，而是通过具体指定一个提交来拉取该文件的对应版本。 我们只需运行类似于 `git reset eb43bf file.txt` 的命令即可。
-![git reset eb43 -- file.txt](http://oncj6b2vl.bkt.clouddn.com/Fp5Cq3mjN7l3br62FjGcBfvXIy2b.png)
+![git reset eb43 -- file.txt](http://img.xiangzhangshugongyi.com/Fp5Cq3mjN7l3br62FjGcBfvXIy2b.png)
 它其实做了同样的事情，也就是把工作目录中的文件恢复到 **v1** 版本，运行 `git add` 添加它，然后再将它恢复到 **v3** 版本（只是不用真的过一遍这些步骤）。 如果我们现在运行 `git commit`，它就会记录一条“将该文件恢复到 **v1** 版本”的更改，尽管我们并未在工作目录中真正地再次拥有它。
 
 还有一点同 `git add` 一样，就是 `reset` 命令也可以接受一个 `--patch` 选项来一块一块地取消暂存的内容。 这样你就可以根据选择来取消暂存或恢复内容了。
@@ -150,11 +150,11 @@ reset 命令会以特定的顺序重写这三棵树，在你指定以下选项�
 假设你的一系列提交信息中有 “oops.”、“WIP” 和 “forgot this file”， 聪明的你就能使用 `reset` 来轻松快速地将它们压缩成单个提交，也显出你的聪明。 （压缩提交 展示了另一种方式，不过在本例中用 `reset` 更简单。）
 
 假设你有一个项目，第一次提交中有一个文件，第二次提交增加了一个新的文件并修改了第一个文件，第三次提交再次修改了第一个文件。 由于第二次提交是一个未完成的工作，因此你想要压缩它。
-![git reset --hard](http://oncj6b2vl.bkt.clouddn.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png)
+![git reset --hard](http://img.xiangzhangshugongyi.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png)
 那么可以运行 `git reset --soft HEAD~2` 来将 HEAD 分支移动到一个旧一点的提交上（即你想要保留的第一个提交）：
-![git reset --soft HEAD~2](http://oncj6b2vl.bkt.clouddn.com/Fmv1H8vky1f0AnvlQmFFVphIn5ae.png)
+![git reset --soft HEAD~2](http://img.xiangzhangshugongyi.com/Fmv1H8vky1f0AnvlQmFFVphIn5ae.png)
 然后只需再次运行 `git commit`：
-![git commit](http://oncj6b2vl.bkt.clouddn.com/FgODKQfa32czRawEZ64luzMM3TRa.png)
+![git commit](http://img.xiangzhangshugongyi.com/FgODKQfa32czRawEZ64luzMM3TRa.png)
 现在你可以查看可到达的历史，即将会推送的历史，现在看起来有个 **v1** 版 `file-a.txt` 的提交，接着第二个提交将 `file-a.txt` 修改成了 **v3** 版并增加了 `file-b.txt`。 包含 **v2** 版本的文件已经不在历史中了。
 
 ## checkout
@@ -170,7 +170,7 @@ reset 命令会以特定的顺序重写这三棵树，在你指定以下选项�
 例如，假设我们有 master 和 develop 分支，它们分别指向不同的提交；我们现在在 develop 上（所以 HEAD 指向它）。 如果我们运行 `git reset master`，那么 develop 自身现在会和 master 指向同一个提交。 而如果我们运行 `git checkout master` 的话，develop 不会移动，HEAD 自身会移动。 现在 HEAD 将会指向 master。
 
 所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。
-![](http://oncj6b2vl.bkt.clouddn.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png)
+![](http://img.xiangzhangshugongyi.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png)
 ### 带路径
 运行 `checkout` 的另一种方式就是指定一个文件路径，这会像 reset 一样不会移动 HEAD。 它就像 `git reset [branch] file` 那样用该次提交中的那个文件来更新索引，但是它也会覆盖工作目录中对应的文件。 它就像是 `git reset --hard [branch] file`（如果 reset 允许你这样运行的话）- 这样对工作目录并不安全，它也不会移动 HEAD。
 
