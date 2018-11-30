@@ -9,6 +9,12 @@ tags:
 - 3-hexo
 - hexo
 ---
+## 2018年11月
+### 11-30
+1. `add` 应用彩色图标，新增简书、知乎、csdn、oschina等图标
+![应用彩色图标](http://img.xiangzhangshugongyi.com/Fgw7J7Ab6BGl09e-qHo5ZmY5D4lW.png)
+2. `fix` 修复 gitment 登录报错的问题
+
 ## 2018年8月
 ### 08-08 修复
 1. `fix` : 修复左侧栏出现滚动条的问题
