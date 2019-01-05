@@ -30,6 +30,7 @@ skip_render:
 - 'daka/**'
 - 'layui-select-multiple/**'
 - 'layui-table-merge/**'
+- 'metelle/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
