@@ -44,6 +44,21 @@ link:
   email: jaytp@qq.com
 ```
 
+## 开启`关于`页面
+1. 在 `hexo` 根目录执行以下，创建 `关于` 页面
+```bash
+hexo new page "about"
+```
+2. 位置： `source/aoubt/index.md` ，根据需要进行编辑。
+3. 在主题中开启显示：修改主题根目录 `_config.yml` 中的 `about` 的 `on` 为 `true`，如下所示
+```yml
+menu:
+  about:  # '关于' 按钮
+    on: true # 是否显示
+    url: /about  # 跳转链接
+    type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
+```
+
 ## 配置评论系统
 目前添加了三种评论系统 **disqus、多说、网易云跟帖**
 >`日志：` 2017-03-21：多说将于2017-06-01正式关停服务
