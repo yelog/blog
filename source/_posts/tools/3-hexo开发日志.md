@@ -9,7 +9,14 @@ tags:
 - 3-hexo
 - hexo
 ---
+## 2019年5月
+
+### 05-05
+
+1. `add` 添加代码段高亮样式配置，对应 markdown 语法 \`\` ，位置：`_config.yml` 关键字 `code`
+
 ## 2019年1月
+
 ### 01-05
 1. `fix` 修复Firefox下，Tags 图标失效问题
 
