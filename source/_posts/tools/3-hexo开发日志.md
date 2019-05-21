@@ -15,7 +15,25 @@ tags:
 ### 05-21
 
 1. `add` 文章分类可以显示文章数 `category>num`
+
 2. `add` 文章分类支持多级显示 `category>sub`
+
+3. `fix` 修复`gitalk`显示评论数错误的问题
+
+4. 添加背景图设置：
+
+   > ① `_config.xml` 配置默认背景图片
+   >
+   > 首页背景图： `index_bg_img: xxx.jpg`
+   >
+   > 文章页面背景图：`other_bg_img: xxx.jpg`
+   >
+   > ② 我们还可以单独给某篇文章设置背景图（优先级最高）
+   >
+   > ```yml
+   > title: 3-hexo开发日志-持续更新
+   > bgImg: xxx.jpg  #设置这篇文章的背景图
+   > ```
 
 
 
