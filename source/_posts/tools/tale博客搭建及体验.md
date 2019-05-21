@@ -4,6 +4,7 @@ permalink: tale-build-experience
 date: 2017-05-24 11:29:30
 categories:
 - 工具
+- 软件记录
 tags:
 - tale
 ---

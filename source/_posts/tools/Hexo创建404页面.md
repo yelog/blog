@@ -4,6 +4,7 @@ permalink: hexo-create-404-page
 date: 2017-02-25 15:18:39
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

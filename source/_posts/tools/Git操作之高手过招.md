@@ -4,6 +4,7 @@ permalink: git-master
 date: 2016-12-23 10:59:01
 categories:
 - 工具
+- git
 tags:
 - Git
 ---

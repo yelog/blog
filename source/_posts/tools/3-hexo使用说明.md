@@ -5,6 +5,7 @@ date: 2017-03-23 15:13:47
 top: 2
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - 3-hexo

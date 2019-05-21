@@ -4,6 +4,7 @@ permalink: hexo-top-sort
 date: 2017-02-24 15:50:38
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

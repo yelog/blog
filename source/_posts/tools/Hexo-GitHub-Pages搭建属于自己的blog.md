@@ -4,6 +4,7 @@ permalink: hexo-gitHub-pages-create-own-blog
 date: 2016-10-22 21:24:05
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - GitHub

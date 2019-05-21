@@ -4,6 +4,7 @@ permalink: Git-SSH-HTTPS-verify-configuration
 date: 2016-12-21 15:31:55
 categories:
 - 工具
+- git
 tags:
 - Git
 ---

@@ -4,6 +4,7 @@ date: 2017-03-24 16:45:31
 permalink: 3-hexo-shortcuts
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - 3-hexo

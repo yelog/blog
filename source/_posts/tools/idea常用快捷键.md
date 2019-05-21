@@ -4,6 +4,7 @@ permalink: idea-shortcuts
 date: 2016-11-05 15:22:48
 categories:
 - 工具
+- 软件记录
 tags:
 - IntellijIDEA
 ---

@@ -4,6 +4,7 @@ permalink: git-reset
 date: 2016-12-24 11:19:24
 categories:
 - 工具
+- git
 tags:
 - Git
 ---

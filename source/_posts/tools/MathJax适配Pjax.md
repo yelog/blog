@@ -4,6 +4,7 @@ permalink: MathJax-pjax
 date: 2017-07-05 19:24:10
 categories:
 - 工具
+- hexo
 tags:
 - mathjax
 - pjax

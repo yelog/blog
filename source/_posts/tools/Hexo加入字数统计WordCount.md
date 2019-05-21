@@ -4,6 +4,7 @@ permalink: Hexo-WordCount
 date: 2017-03-09 16:57:10
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

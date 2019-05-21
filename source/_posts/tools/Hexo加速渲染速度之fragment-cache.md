@@ -4,6 +4,7 @@ permalink: hexo-fragment_cache
 date: 2017-09-21 19:34:37
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - fragment_cache

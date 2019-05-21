@@ -4,6 +4,7 @@ permalink: Hexo-RSS-Sitemap
 date: 2017-03-14 09:44:29
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

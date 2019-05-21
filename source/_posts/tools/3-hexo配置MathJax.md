@@ -5,6 +5,7 @@ date: 2017-07-05 15:09:42
 mathjax: true
 categories:
 - 工具
+- hexo
 tags:
 - mathjax
 ---

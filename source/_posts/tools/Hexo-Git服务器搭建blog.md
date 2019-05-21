@@ -4,6 +4,7 @@ permalink: hexo-git-server-blog
 date: 2016-10-23 09:24:03
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - Git

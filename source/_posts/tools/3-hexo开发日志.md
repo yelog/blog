@@ -5,11 +5,19 @@ permalink: 3-hexo-logs
 top: 3
 categories:
 - 工具
+- hexo
 tags:
 - 3-hexo
 - hexo
 ---
 ## 2019年5月
+
+### 05-21
+
+1. `add` 文章分类可以显示文章数 `category>num`
+2. `add` 文章分类支持多级显示 `category>sub`
+
+
 
 ### 05-05
 

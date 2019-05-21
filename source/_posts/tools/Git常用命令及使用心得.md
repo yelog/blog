@@ -4,6 +4,7 @@ permalink: Git-command
 date: 2016-10-02 17:15:39
 categories:
 - 工具
+- git
 tags:
 - Git
 originView: 常用Git 命令清单- 阮一峰的网络日志

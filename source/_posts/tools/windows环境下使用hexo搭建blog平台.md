@@ -4,6 +4,7 @@ permalink: windows-hexo
 date: 2017-03-17 14:02:55
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

@@ -4,6 +4,7 @@ permalink: computer-mutiple-github-account
 date: 2016-09-30 16:42:48
 categories:
 - 工具
+- git
 tags: [Git,GitHub]
 ---
 最近想要使用自己的GitHub搭建Hexo博客，同时还要使用工作的GitHub开发项目，所以在网上找寻了一些文章，在此将自己的搭建过程记录一下。

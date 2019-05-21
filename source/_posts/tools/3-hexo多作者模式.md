@@ -4,6 +4,7 @@ permalink: 3-hexo-multiple-author
 date: 2017-02-28 10:55:31
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 - 3-hexo

@@ -4,6 +4,7 @@ permalink: gitment
 date: 2017-06-26 12:08:13
 categories:
 - 工具
+- hexo
 tags:
 - hexo
 ---

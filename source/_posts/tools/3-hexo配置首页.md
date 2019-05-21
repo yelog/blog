@@ -4,6 +4,7 @@ date: 2017-03-13 09:56:07
 permalink: 3-hexo-homepage
 categories:
 - 工具
+- hexo
 tags:
 - 3-hexo
 - hexo

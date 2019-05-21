@@ -4,6 +4,7 @@ permalink: Mac-BetterTouchTool
 date: 2017-12-13 17:04:25
 categories:
 - 工具
+- 软件记录
 tags:
 - mac
 - efficiency

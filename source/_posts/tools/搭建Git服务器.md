@@ -4,6 +4,7 @@ permalink: set-up-git-server-on-vps
 date: 2016-10-22 20:08:04
 categories:
 - 工具
+- git
 tags:
 - Git
 ---

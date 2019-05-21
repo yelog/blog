@@ -4,6 +4,7 @@ permalink: deepin-linux
 date: 2017-03-30 18:58:50
 categories:
 - 工具
+- 软件记录
 tags:
 - deepin
 - 运维

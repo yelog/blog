@@ -4,6 +4,7 @@ permalink: Git统计操作
 date: 2017-05-16 09:26:11
 categories:
 - 工具
+- git
 tags:
 - git
 ---
