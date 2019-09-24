@@ -11,9 +11,13 @@ tags:
 - hexo
 ---
 ## 2019年9月
+### 09-24
+
+1.`add`: 支持文章内 toc 生成 {% post_link 3-hexo-toc %}
+
 ### 09-05
 
-1.`fix`: `pjax` 兼容 `jsfiddle` 的渲染
+1.`fix`: `pjax` 兼容 `jsfiddle` 的渲染 {% post_link 3-hexo-jsfiddle %}
 
 ## 2019年8月
 ### 08-20
