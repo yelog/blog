@@ -14,7 +14,7 @@ tags:
 
 ## 注册 OAuth Application
 [点击此处](https://github.com/settings/applications/new) 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 http://yelog.org）。
-![作者是这样填的](http://img.xiangzhangshugongyi.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png)
+![作者是这样填的](http://img.saodiyang.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png)
 
 ## 使用 gitment 评论系统
 修改主题 `_config.yml`
@@ -33,7 +33,7 @@ gitment:
 $ hexo clear && hexo g && hexo d
 ```
 2.打开发布的blog，登录github账号，并点击 `Initialize Comments`。
-![初始化本页的评论](http://img.xiangzhangshugongyi.com/FnO9sHY-eFVXwnLplwsP9NRvityH.png)
+![初始化本页的评论](http://img.saodiyang.com/FnO9sHY-eFVXwnLplwsP9NRvityH.png)
 
 3.现在其他人就可以进行评论了
 

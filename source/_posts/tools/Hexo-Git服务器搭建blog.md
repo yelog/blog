@@ -14,7 +14,7 @@ Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源
 本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog
 <!--more -->
 ## 搭建思路
-![图解](http://img.xiangzhangshugongyi.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg)
+![图解](http://img.saodiyang.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg)
 1. 客户端就是自己的电脑,可以把hexo的静态资源目录当成一个git仓库.
 2. 首先配置好远程git仓库,通过 hexo d 将静态网站资源push到远程git仓库
 3. git仓库接收到push处理完成后,自动触发post-receive这个钩子.

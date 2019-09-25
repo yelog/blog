@@ -56,7 +56,7 @@ $ top [参数]
 $ top
 ```
 **top讲解**
-![top命令](http://img.xiangzhangshugongyi.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg)
+![top命令](http://img.saodiyang.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg)
 **其他技巧**
 1. 数字`1`，可监控每个逻辑CPU的状况
 2. 键盘`b`（打开/关闭加亮效果），运行状态的进程

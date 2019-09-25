@@ -95,7 +95,7 @@ tags:
 ## 2018年11月
 ### 11-30
 1. `add` 应用彩色图标，新增简书、知乎、csdn、oschina等图标
-![应用彩色图标](http://img.xiangzhangshugongyi.com/Fgw7J7Ab6BGl09e-qHo5ZmY5D4lW.png)
+![应用彩色图标](http://img.saodiyang.com/Fgw7J7Ab6BGl09e-qHo5ZmY5D4lW.png)
 2. `fix` 修复 gitment 登录报错的问题
 3. `enhance` 升级gitalk插件，并跟随官方版本
 

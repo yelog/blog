@@ -10,7 +10,7 @@ tags:
 - efficiency
 ---
 ## 介绍
-![BetterTouchTool](http://img.xiangzhangshugongyi.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png)
+![BetterTouchTool](http://img.saodiyang.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png)
 BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控板)/`Magic Mouse`(苹果鼠标)/`Keyboard`(键盘)/`TouchBar` 功能增强制作的软件。
 
 这款软件不但可以设置全局的 手势/快捷键/TouchBar ，还可以给不同的应用定义不同的姿势，再配合上 Alfred 的 workflow，简直各种高难度姿势都能玩的出来。
@@ -29,9 +29,9 @@ BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控
 - 将窗口移到左右边缘，最大化至半屏
 - 将窗口移到上边缘，最大化至全屏
 
-![窗口管理](http://img.xiangzhangshugongyi.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif)
+![窗口管理](http://img.saodiyang.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif)
 如果对默认配置不满意，也可以在如下图所示的位置来调整窗口展示：
-![窗口管理配置](http://img.xiangzhangshugongyi.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png)
+![窗口管理配置](http://img.saodiyang.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png)
 
 ## 2. 帮 Trackpad 定义各种姿势
 ### 姿势选择
@@ -39,7 +39,7 @@ BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控
 
 左边可以选择生效的范围：全局或者某个应用
 
-![选择触摸板姿势](http://img.xiangzhangshugongyi.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg)
+![选择触摸板姿势](http://img.saodiyang.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg)
 如上图所示，姿势包括但不限于如：
 1. 单指：左下角单击、单指轻拍右上角、单指轻拍上边中点
 2. 双指：两个手指捏、张开两指以两指中心为圆轴逆时针、中指拍住中央食指轻拍面板、双指从上边缘下滑
@@ -50,7 +50,7 @@ BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控
 上面只是列一些典型，更多姿势可以在上图中浏览。
 
 ### 绑定功能
-![定义姿势功能](http://img.xiangzhangshugongyi.com/FjNWJgoefc34vGaUhruvWQr2R--5.png)
+![定义姿势功能](http://img.saodiyang.com/FjNWJgoefc34vGaUhruvWQr2R--5.png)
 
 选择过姿势之后，也可以选择在按住某个功能键的时候才能使用（左下角）。
 
@@ -58,18 +58,18 @@ BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控
 
 - 绑定快捷键举例：
 比如 给chrome 设置 姿势（两指从触控板下边缘滑入），弹出开发者模式（快捷键绑定：command+option+i），如下图：
-![给chrome设置姿势，弹出开发者模式](http://img.xiangzhangshugongyi.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg)
+![给chrome设置姿势，弹出开发者模式](http://img.saodiyang.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg)
 
 - 绑定动作举例：
 设置 在任何应用内，五指下滑 锁屏，如下图
-![五指下滑锁屏](http://img.xiangzhangshugongyi.com/FuTHBQJRvDVem9c14G608eXKtR7R.png)
+![五指下滑锁屏](http://img.saodiyang.com/FuTHBQJRvDVem9c14G608eXKtR7R.png)
 
 ## 3. 帮 Magic Mouse 定义各种姿势
 这个功能设置和 Trackpad 设置 大同小异，所以这边就不多讲，直接图示几个功能。
-![两指上滑呼出Mission Control](http://img.xiangzhangshugongyi.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png)
+![两指上滑呼出Mission Control](http://img.saodiyang.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png)
 
 我快捷键设置了 option+E 鼠标取词翻译（欧陆词典），然后绑定到双指轻拍鼠标，即可触发翻译。
-![双指轻拍-取词翻译](http://img.xiangzhangshugongyi.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png)
+![双指轻拍-取词翻译](http://img.saodiyang.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png)
 
 ## 4. 帮 Keyboard 定义各种姿势
 这个功能比较简单，设置一些 键盘快捷键或录制案件序列 来触发 一些动作或者其他快捷键功能。
@@ -79,12 +79,12 @@ BetterTouchTool 是一款专为Mac用户开发的 窗口管理/`Trackpad`(触控
 
 下面就以我给 IntelliJ IDEA 定制 TouchBar 为例 (没有F1 ~ F12 功能键，debug真的很痛苦，这个软件真的是雪中送炭)，展示一下使用效果
 
-![定制 TouchBar](http://img.xiangzhangshugongyi.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png)
+![定制 TouchBar](http://img.saodiyang.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png)
 
 如上图所示，我给 IntelliJ IDEA 添加了 四个功能 step over/step into/resume/evaluate
 
 添加完之后，切到 IntelliJ IDEA 软件中时，TouchBar 就显示我们添加的四个功能键， 如下图所示
-![IntelliJ IDEA 定制 TouchBar](http://img.xiangzhangshugongyi.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png)
+![IntelliJ IDEA 定制 TouchBar](http://img.saodiyang.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png)
 
 ## 最后
 

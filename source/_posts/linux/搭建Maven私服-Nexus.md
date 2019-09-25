@@ -37,20 +37,20 @@ $ ./nexus start
 打开网址：(http://192.168.0.86:8081/) , ip 为搭建私服的服务器 ip 。
 用户名/密码： admin/admin123
 出现一下画面，就说明安装成功了。
-![nexus](http://img.xiangzhangshugongyi.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png)
+![nexus](http://img.saodiyang.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png)
 
 ## 发布soul项目到私服
 ### 创建仓库
 1. 创建yelog-release仓库（*名字自定义*）, type选择 ： release
-![①.创建宿主仓库](http://img.xiangzhangshugongyi.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png)
-![②.选择hosted类型](http://img.xiangzhangshugongyi.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png)
-![③.创建release类型仓库](http://img.xiangzhangshugongyi.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png)
+![①.创建宿主仓库](http://img.saodiyang.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png)
+![②.选择hosted类型](http://img.saodiyang.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png)
+![③.创建release类型仓库](http://img.saodiyang.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png)
 2. 创建yelog-snapshot仓库（*名字自定义*）， type选择 ： snapshot
 重复上面 ① 和 ② 步，根据下图选择类型:
-![创建snapshot类型仓库](http://img.xiangzhangshugongyi.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png)
+![创建snapshot类型仓库](http://img.saodiyang.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png)
 
 两个都创建完成后，效果如下：
-![创建自定义release和snapshot仓库](http://img.xiangzhangshugongyi.com/FjcMrajAM3anymLemHA2OoZZUut-.png)
+![创建自定义release和snapshot仓库](http://img.saodiyang.com/FjcMrajAM3anymLemHA2OoZZUut-.png)
 
 ### pom中添加部署配置
 url 复制上图中新建的仓库的 copy 按钮，复制url。
@@ -87,9 +87,9 @@ url 复制上图中新建的仓库的 copy 按钮，复制url。
 
 ### 执行maven命令部署项目到私服上
 我这里直接使用IDE的插件执行
-![部署项目到私服](http://img.xiangzhangshugongyi.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png)
+![部署项目到私服](http://img.saodiyang.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png)
 部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示
-![查看部署情况](http://img.xiangzhangshugongyi.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png)
+![查看部署情况](http://img.saodiyang.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png)
 
 ## 从私服拉去依赖库
 > 上一步我们已经将项目 `soul` 部署到私服上了，这一步介绍项目 `ssm` 如何依赖引用 `soul`。
@@ -97,7 +97,7 @@ url 复制上图中新建的仓库的 copy 按钮，复制url。
 
 ### pom 文件中添加如下配置
 1. public库成员仓库中添加我们自定义的仓库
-![public库设置成员仓库](http://img.xiangzhangshugongyi.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png)
+![public库设置成员仓库](http://img.saodiyang.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png)
 2. 配置远程仓库为私服地址。
 ```xml
 <repositories>
@@ -130,6 +130,6 @@ url 复制上图中新建的仓库的 copy 按钮，复制url。
 </dependency>
 ```
 4. ssm项目就可以引用到soul代码
-![在代码中就可以直接引用到部署到私服的soul项目代码](http://img.xiangzhangshugongyi.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png)
+![在代码中就可以直接引用到部署到私服的soul项目代码](http://img.saodiyang.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png)
 
 本文结束。

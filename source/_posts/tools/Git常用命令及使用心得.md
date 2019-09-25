@@ -13,7 +13,7 @@ originUrl: http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
 经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络）
 
 一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。
-![git常用命令](http://img.xiangzhangshugongyi.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png)
+![git常用命令](http://img.saodiyang.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png)
 <!--more -->
 下面整理的 Git 命令清单。几个专业名词的译名如下。
 
