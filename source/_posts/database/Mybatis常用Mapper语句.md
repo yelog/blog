@@ -7,7 +7,6 @@ categories:
 tags:
 - mybatis
 ---
-
 ### 插入
 ```sql
 /* 简单插入 */
