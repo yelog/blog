@@ -15,6 +15,7 @@ tags:
 ### 11-12
 
 1.`fix`: 修复 hexo4.0 版本链接外跳的问题
+2.`add`: 支持 mermaid {% post_link 3-hexo-support-mermaid %}
 
 ### 09-24
 

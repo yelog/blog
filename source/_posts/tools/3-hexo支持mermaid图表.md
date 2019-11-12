@@ -34,7 +34,7 @@ mermaid:
 
 
 ## 二、示例
-以下示例源码可以在这边查看 [文章备份](https://github.com/yelog/blog/blob/master/source/_posts/tools/3-hexo-%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6.md)
+以下示例源码可以在这边查看 [本文源码](https://github.com/yelog/blog/blob/master/source/_posts/tools/3-hexo%E6%94%AF%E6%8C%81mermaid%E5%9B%BE%E8%A1%A8.md)
 更多示例可以查看官网：[https://mermaidjs.github.io](https://mermaidjs.github.io)
 
 ### 1. flowchart
