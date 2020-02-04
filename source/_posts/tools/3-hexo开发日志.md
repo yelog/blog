@@ -10,6 +10,12 @@ tags:
 - 3-hexo
 - hexo
 ---
+## 2020年2月
+
+### 02-04
+
+1.`fix`: 修复 gitalk 使用  app API query parameter 弃用的问题
+
 ## 2019年11月
 
 ### 11-12
