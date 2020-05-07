@@ -11,7 +11,7 @@ tags:
 web.xml文件是用来配置:欢迎页、servlet、filter、listener等的. 当你的web项目工程没用到这些时,你可以不用web.xml文件来配置你的web工程。
 如果项目中有多项标签,其加载顺序依次是:context-param >> listener >> filter >> servlet(同类多个节点出现顺序依次加载)
 <!--more -->
-1. ​web.xml先读取context-param和listener这两种节点；
+1. web.xml先读取context-param和listener这两种节点；
 2. 然后容器创建一个ServletContext(上下文)，应用于整个项目；
 3. 容器会将读取到的context-param转化为键值对并存入servletContext；
 4. 根据listener创建监听；
