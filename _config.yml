@@ -6,7 +6,7 @@
 title: 叶落阁
 description:
 author: 叶落阁
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -89,8 +89,8 @@ theme: 3-hexo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repo: git@github.com:yelog/yelog.github.io.git 
-  #repo: git@gitee.com:saodiyang/blog.git
+  #repo: git@github.com:yelog/yelog.github.io.git 
+  repo: git@gitee.com:saodiyang/blog.git
   #repo: git@git.coding.net:yelog/blog.git
   #repo: server63:/var/html/yelog.git
   branch: master
