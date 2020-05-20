@@ -91,7 +91,5 @@ deploy:
 - type: git
   #repo: git@github.com:yelog/yelog.github.io.git 
   repo: git@gitee.com:saodiyang/blog.git
-  #repo: git@git.coding.net:yelog/blog.git
-  #repo: server63:/var/html/yelog.git
   branch: master
   message: "Site updateed: {{ now('YYYY-MM-DD HH:mm:ss') }}"
