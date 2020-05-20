@@ -12,7 +12,27 @@ tags:
 ---
 >下面如果没有特殊说明， `_config.yml` 都指主题配置文件，即 `3-hexo` 目录下
 
+## 初始化博客下 _config.yml
+
+### 1.国际化
+
+```yaml
+language: zh-CN #支持 zh-CN、en
+```
+
+### 2.关掉 hexo 自带的代码高亮
+
+主题内置了主题高亮，所以需要禁用 hexo 自带的高亮
+
+```yaml
+highlight:
+	enable: false
+```
+
+
+
 ## 自定义首页
+
 可查看这篇文章： {% post_link 3-hexo-homepage  %}
 
 ## blog快捷键
