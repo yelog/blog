@@ -23,7 +23,7 @@ tags:
 1. 替换 `source/img/avatar.jpg` 图片。
 2. 修改 `_config.yml` 中头像的配置记录
 
-```xml
+```yaml
 # 你的头像url
 avatar: /img/avatar.jpg
 favicon: /img/avatar.jpg
@@ -31,7 +31,7 @@ favicon: /img/avatar.jpg
 
 ## 设置链接图标
 如下，如果没有连接，则不展示图标。
-```xml
+```yaml
 #链接图标，链接为空则不显示
 link:
   rss: /atom.xml
@@ -76,7 +76,7 @@ menu:
 
 ### meta区显示评论数
 开启设置 `_config.yml`
-```xml
+```yaml
 comment_count: true
 # 文章标题下方显示评论数
 ```
@@ -84,7 +84,7 @@ comment_count: true
 
 ### 评论区预加载
 开启设置 `_config.yml`
-```xml
+```yaml
 preload_comment: false
 ```
 1. false: 当点击评论条等区域时再加载评论模块
@@ -95,13 +95,13 @@ preload_comment: false
 ## 样式设置
 ### 代码高亮
 首先要关闭hexo根目录下`_config.yml`中的高亮设置：
-```xml
+```yaml
 highlight:
   enable: false
 ```
 配置主题下`_config.yml`中的高亮设置：
 可以根据提示，配置喜欢的高亮主题
-```xml
+```yaml
 highlight:
   on: true # true开启代码高亮
   lineNum: true # true显示行号
@@ -126,7 +126,7 @@ highlight:
 ```
 ### MathJax数学公式
 修改 `_config.yml`
-```xml
+```yaml
 # MathJax 数学公式支持
 mathjax:
   on: true #是否启用
@@ -134,6 +134,7 @@ mathjax:
 ```
 考虑到页面的加载速度，支持渲染单个页面。
 设置 `per_page: false` ,在需要渲染的页面内 加入 `mathjax: true`
+
 > **`注意: `**
 由于hexo的MarkDown渲染器与MathJax有冲突，可能会造成矩阵等使用不正常。所以在使用之前需要修改两个地方
 编辑 `node_modules\marked\lib\marked.js` 脚本
@@ -153,7 +154,7 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 
 ### 表格样式
 目前提供了3中样式，修改 `_config.yml`
-```xml
+```yaml
 table: green_title
 # table 的样式
 # 为空时类似github的table样式
@@ -162,7 +163,7 @@ table: green_title
 ```
 ### 文章列表的hover样式
 鼠标移入的背景色和文字颜色变动，设置 `_config.yml`
-```xml
+```yaml
 #文章列表 鼠标移上去的样式, 为空时使用默认效果
 article_list:
   hover:
@@ -174,14 +175,55 @@ article_list:
 1. 开启此功能需先安装插件，在 hexo根目录 执行 `npm i hexo-wordcount --save`
 2. 修改 `_config.yml`
 
-```xml
+```yaml
 word_count: true
 ```
 ## 多作者模式
 可查看这篇文章： {% post_link 3-hexo-multiple-author %}
 
-## 文章排序及置顶
-可查看这篇文章： {% post_link hexo-top-sort  %}
+## 排序及置顶
+
+### 1.分类排序
+
+默认按照首字母正序排序，由于中文在 `nodejs` 环境下不能按照拼音首字母排序，所以添加了自定义排序方式，在主题下 `_config.yml` 中找到如下配置，`category.sort`则是定义分类顺序的。
+
+**规则：**在 `sort`中定义的 `category` 比 没有在 `sort` 中定义的更靠前
+
+```yaml
+# 文章分类设置
+category:
+  num: true # 分类显示文章数
+  sub: true # 开启多级分类
+  sort:
+    - 读书
+    - 大前端
+    - 后端
+    - 数据库
+    - 工具
+    - 运维
+```
+
+
+
+### 2. 文章排序
+
+> 2020-05-20 更新：无需安装插件或修改源码，主题以内置排序算法
+
+文章列表默认按照创建时间（如下文章内定义的`date`）倒序。
+
+使用 `top` 将会置顶文章，多个置顶文章时，`top` 定义的值越大，越靠前。
+
+```yml
+---
+title: 每天一个linux命令
+date: 2017-01-23 11:41:48
+top: 1
+categories:
+- 运维
+tags:
+- linux命令
+---
+```
 
 ## 关于写文章
 ### 如何写
@@ -190,7 +232,7 @@ word_count: true
 `categories`:文集，为左侧列表
 `tags`:标签，通过#来筛选
 例如 本篇文章的设置
-```xml
+```yaml
 ---
 title: 3-hexo使用说明
 date: 2017-03-23 15:13:47
@@ -205,7 +247,8 @@ tags:
 1.设置模板，blog根目录 `scaffolds/post.md`
 加入categories,tags等，这样以后通过 `hexo new` 生成的模板就不用写这两个单词了。
 当然，你也可以写入任何你每个文章中都会有的部分。
-```xml
+
+```yaml
 ---
 title: {{ title }}
 date: {{ date }}
@@ -218,6 +261,7 @@ tags:
 ### 快捷命令
 其实就通过alias，触发一些命令的集合
 在 `~/.bashrc` 文件中添加
+
 ```bash
 alias hs='hexo clean && hexo g && hexo s'  #启动本地服务
 alias hd='hexo clean && hexo g && hexo d'  #部署博客

@@ -67,5 +67,10 @@ tags:
 ```
 如果存在多个置顶文章，top后的参数越大，越靠前。
 
-References
+## 2020-05-20 更新
+
+3-hexo 主题已经内置排序算法，无需上面下载插件或修改源码，可以直接使用，具体可看 {% post_link  3-hexo-instruction %} 中的排序相关内容
+
+## References
+
 　　Netcan 的 [解决Hexo置顶问题](http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/)
