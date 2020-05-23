@@ -18,6 +18,8 @@ tags:
 2. `fix` 修复文章大纲为空时，同步大纲报错的问题
 3. `change` 文章内 toc 生成从 `@【toc】` 改为 `【toc】` 
 4. `enhance` 快捷键支持关闭 `shortcutKey: false`
+5. `add` 添加第三方评论 来必力 和 utteranc
+6. `remove` 移除网易云评论
 
 ### 05-21
 

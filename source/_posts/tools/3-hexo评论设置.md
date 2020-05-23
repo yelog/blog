@@ -11,13 +11,7 @@ tags:
 
 ## 前言
 
-目前 `3-hexo` 已经集成了评论系统有 `gitalk` 、`gitment`、 `disqus` 、`来必力`
-
-## 一、在主题内添加一个新的评论
-
-
-
-### 1. 
+目前 `3-hexo` 已经集成了评论系统有 `gitalk` 、`gitment`、 `disqus` 、`来必力`、`utteranc`
 
 ## 一、gitalk
 
@@ -78,6 +72,13 @@ gitalk:
 
 在主题下 `_config.yml`  
 
+在找到来必力配置如下，第一步中复制的 `data-uid` 粘贴到下面 `data_uid` 处
+
+```yaml
+livere:
+  data_uid: xxxxxx
+```
+
 找到以下代码， 开启并选择 livere (来必力)
 
 ```yaml
@@ -85,13 +86,6 @@ gitalk:
 comment:
   on: true
   type: livere
-```
-
-在找到来必力配置如下，第一步中复制的 `data-uid` 粘贴到下面 `data_uid` 处
-
-```yaml
-livere:
-  data_uid: xxxxxx
 ```
 
 
@@ -104,4 +98,25 @@ livere:
 
 [点我进行安装](https://github.com/apps/utterances)
 
-### 2. 
+### 2. 配置主题
+
+在主题下 `_config.yml` 中找到 `utteranc` 的配置 ，修改 `repo` 为自己的仓库名
+
+```yaml
+utteranc:
+  repo: xxx/xxx.github.io # 承载评论的仓库，填上自己的仓库
+  issue_term: pathname    # Issue 与 博客文章 之间映射关系
+  label: utteranc         # 创建的 Issue 添加的标签
+  theme: github-light     # 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme
+# 官方文档 https://utteranc.es/
+# 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
+```
+
+在主题下 `_config.yml` 中找到如下配置，启用评论，并使用 `utteranc`
+
+```yaml
+comment:
+  on: true
+  type: utteranc
+```
+

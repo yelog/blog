@@ -84,33 +84,7 @@ menu:
 {% post_link  3-hexo-add-music %}
 
 ## 配置评论系统
-目前添加了三种评论系统 **disqus、多说、网易云跟帖、gitment、gitalk**
->`日志：` 2017-03-21：多说将于2017-06-01正式关停服务
-
-### 启用评论
-以 `disqus` 为例；
-1. 关掉其他两个评论（设置on: false）
-2. 启用 `disqus` ,设置on: true
-3. 登陆 `disqus` 注册，得到shortname，填入shortname。
-4. 重启 `hexo`。
-
-### meta区显示评论数
-开启设置 `_config.yml`
-```yaml
-comment_count: true
-# 文章标题下方显示评论数
-```
-![开启效果](http://img.saodiyang.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png)
-
-### 评论区预加载
-开启设置 `_config.yml`
-```yaml
-preload_comment: false
-```
-1. false: 当点击评论条等区域时再加载评论模块
-2. true: 页面加载时加载评论区
-
-![关闭效果](http://img.saodiyang.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png)
+{% post_link  3-hexo-comment %}
 
 ## 样式设置
 ### 代码高亮
