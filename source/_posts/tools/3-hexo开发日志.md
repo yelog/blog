@@ -12,6 +12,17 @@ tags:
 ---
 ## 2020年2月
 
+### 05-23
+
+1. `change` 由于 `cloudflare` 国内访问不稳定，故 `cdn` 切换到 `jsdelivr`
+2. `fix` 修复文章大纲为空时，同步大纲报错的问题
+3. `change` 文章内 toc 生成从 `@【toc】` 改为 `【toc】` 
+4. `enhance` 快捷键支持关闭 `shortcutKey: false`
+
+### 05-21
+
+1. `add` 添加备案号配置
+
 ### 05-20
 
 1. `enhance` 内置文章排序，无需再引入排序插件或修改源代码

@@ -10,13 +10,13 @@ tags:
 - 3-hexo
 ---
 
-@[TOC]
+[toc]
 
 ## 1. 如何使用
 
 ### 1.1 关键字
 只要在在文章中使用如下关键字，不区分大小写，便可以在相应位置显示目录导航，效果文章开头
-![](https://i.loli.net/2019/09/24/qPEhN34FIdeCLOv.png)
+![toc](https://i.loli.net/2020/05/23/Zq9jCWfwxNBpcOm.png)
 
 ### 1.2 小标题2
 占位<br>
