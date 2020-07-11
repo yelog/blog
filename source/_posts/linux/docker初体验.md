@@ -7,10 +7,14 @@ categories:
 tags:
 - docker
 ---
-## 笔者环境
+## 安装
+
+### 笔者环境
+
 操作系统：deepin 15.4 Desktop 64Bit
 
-## 安装
+### 安装
+
 ```bash
 # 官方 的安装脚本
 $ curl -sSL https://get.docker.com/ | sh
@@ -21,7 +25,8 @@ $ curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/
 # DaoCloud 的安装脚本
 $ curl -sSL https://get.daocloud.io/docker | sh
 ```
-## 获取镜像
+### 获取镜像
+
 [Docker Hub](https://hub.docker.com/explore/) 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像并运行。
 从 Docker Registry 获取镜像的命令是 docker pull。其命令格式为：
 ```bash
@@ -36,7 +41,8 @@ $ docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
 $ sudo docker pull ubuntu
 ```
 
-## 运行
+### 运行
+
 有了镜像后，我们就可以以这个镜像为基础启动一个容器来运行。以上面的 `ubuntu` 为例，如果我们打算启动里面的 `bash` 并且进行交互式操作的话，可以执行下面的命令。
 ```bash
 $ sudo docker run -it --rm ubuntu
