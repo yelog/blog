@@ -1,7 +1,6 @@
 ---
 title: 3-hexo开发日志-持续更新
 date: 2017-03-13 15:44:57
-permalink: 3-hexo-logs
 top: 3
 categories:
 - 工具
@@ -333,4 +332,4 @@ tags:
 3. 使用pjax方式加载页面
 4. 添加引用、表格等样式
 5. 使用highlight.js来处理代码块高亮
-6. 命名为3-hexo并在github上开源
+6. 命名为3-hexo并在github上开源e
