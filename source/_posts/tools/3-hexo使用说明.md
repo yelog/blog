@@ -12,15 +12,15 @@ tags:
 ---
 >下面如果没有特殊说明， `_config.yml` 都指主题配置文件，即 `3-hexo` 目录下
 
-## 初始化博客下 _config.yml
+## 一、初始化博客下 _config.yml
 
-### 1.国际化
+### 1.1 国际化
 
 ```yaml
 language: zh-CN #支持 zh-CN、en
 ```
 
-### 2.关掉 hexo 自带的代码高亮
+### 1.2 关掉 hexo 自带的代码高亮
 
 主题内置了主题高亮，所以需要禁用 hexo 自带的高亮
 
@@ -31,41 +31,18 @@ highlight:
 
 
 
-## 自定义首页
+## 二、功能相关
+### 2.1 自定义首页
 
 可查看这篇文章： {% post_link 3-hexo-homepage  %}
 
-## blog快捷键
+### 2.3 blog快捷键
 可查看这篇文章： {% post_link 3-hexo-shortcuts %}
 
-## 更换头像
-两种方式：
-1. 替换 `source/img/avatar.jpg` 图片。
-2. 修改 `_config.yml` 中头像的配置记录
+### 2.4 多作者模式
+可查看这篇文章： {% post_link 3-hexo-multiple-author %}
 
-```yaml
-# 你的头像url
-avatar: /img/avatar.jpg
-favicon: /img/avatar.jpg
-```
-
-## 设置链接图标
-如下，如果没有连接，则不展示图标。
-```yaml
-#链接图标，链接为空则不显示
-link:
-  rss: /atom.xml
-  github: https://github.com/yelog
-  facebook: https://www.facebook.com/faker.tops
-  twitter:
-  linkedin:
-  instagram:
-  reddit: https://www.reddit.com/user/yelog/
-  weibo: http://weibo.com/u/2307534817
-  email: jaytp@qq.com
-```
-
-## 开启`关于`页面
+### 2.5 开启`关于`页面
 1. 在 `hexo` 根目录执行以下，创建 `关于` 页面
 ```bash
 hexo new page "about"
@@ -80,14 +57,14 @@ menu:
     type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
 ```
 
-## 添加音乐插件
+### 2.6 添加音乐插件
 {% post_link  3-hexo-add-music %}
 
-## 配置评论系统
+### 2.7 配置评论系统
 {% post_link  3-hexo-comment %}
 
-## 样式设置
-### 代码高亮
+## 三、样式设置
+### 3.1 代码高亮
 首先要关闭hexo根目录下`_config.yml`中的高亮设置：
 ```yaml
 highlight:
@@ -118,7 +95,7 @@ highlight:
 # kimbie-light :
 # school-book : 纸张效果
 ```
-### MathJax数学公式
+### 3.2 MathJax数学公式
 修改 `_config.yml`
 ```yaml
 # MathJax 数学公式支持
@@ -146,7 +123,7 @@ em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 ```
 
-### 表格样式
+### 3.3 表格样式
 目前提供了3中样式，修改 `_config.yml`
 ```yaml
 table: green_title
@@ -155,7 +132,7 @@ table: green_title
 # green 绿色样式
 # green_title 头部为青色的table样式
 ```
-### 文章列表的hover样式
+### 3.4 文章列表的hover样式
 鼠标移入的背景色和文字颜色变动，设置 `_config.yml`
 ```yaml
 #文章列表 鼠标移上去的样式, 为空时使用默认效果
@@ -165,19 +142,46 @@ article_list:
     color:     # 文字颜色 提供几种：'#ffffff'
 # 注意：由于颜色如果包含#，使用单引号 ' 引起来
 ```
-## 开启字数统计
+### 3.5 开启字数统计
 1. 开启此功能需先安装插件，在 hexo根目录 执行 `npm i hexo-wordcount --save`
 2. 修改 `_config.yml`
 
 ```yaml
 word_count: true
 ```
-## 多作者模式
-可查看这篇文章： {% post_link 3-hexo-multiple-author %}
+### 3.6 更换头像
+两种方式：
+1. 替换 `source/img/avatar.jpg` 图片。
+2. 修改 `_config.yml` 中头像的配置记录
 
-## 排序及置顶
+```yaml
+# 你的头像url
+avatar: /img/avatar.jpg
+favicon: /img/avatar.jpg
+```
 
-### 1.分类排序
+### 3.7 设置链接图标
+
+> 如果需要自定义图标可以看这篇文章 {% post_link 3-hexo-add-icon %}
+
+如下，如果没有连接，则不展示图标。
+```yaml
+#链接图标，链接为空则不显示
+link:
+  rss: /atom.xml
+  github: https://github.com/yelog
+  facebook: https://www.facebook.com/faker.tops
+  twitter:
+  linkedin:
+  instagram:
+  reddit: https://www.reddit.com/user/yelog/
+  weibo: http://weibo.com/u/2307534817
+  email: jaytp@qq.com
+```
+
+## 四、排序及置顶
+
+### 4.1 分类排序
 
 默认按照首字母正序排序，由于中文在 `nodejs` 环境下不能按照拼音首字母排序，所以添加了自定义排序方式，在主题下 `_config.yml` 中找到如下配置，`category.sort`则是定义分类顺序的。
 
@@ -199,7 +203,7 @@ category:
 
 
 
-### 2. 文章排序
+### 4.2 文章排序
 
 > 2020-05-20 更新：无需安装插件或修改源码，主题以内置排序算法
 
@@ -219,8 +223,8 @@ tags:
 ---
 ```
 
-## 关于写文章
-### 如何写
+## 五、关于写文章
+### 5.1 如何写
 每篇文章最好写上文集和标签，方便筛选和查看。
 一般推荐一篇文章设置一个文集，一个或多个标签
 `categories`:文集，为左侧列表
@@ -237,7 +241,7 @@ tags:
 - 3-hexo
 ---
 ```
-### 写作
+### 5.2 写作
 1.设置模板，blog根目录 `scaffolds/post.md`
 加入categories,tags等，这样以后通过 `hexo new` 生成的模板就不用写这两个单词了。
 当然，你也可以写入任何你每个文章中都会有的部分。
@@ -251,8 +255,8 @@ tags:
 ---
 ```
 
-## 技巧
-### 快捷命令
+## 六、技巧
+### 6.1 快捷命令
 其实就通过alias，触发一些命令的集合
 在 `~/.bashrc` 文件中添加
 
@@ -262,7 +266,7 @@ alias hd='hexo clean && hexo g && hexo d'  #部署博客
 ```
 甚至你也可以加入备份文章的命令，可以自由发挥。
 
-### 博客备份（快捷命令升级版）
+### 6.3 博客备份（快捷命令升级版）
 为了保证我们写的文章不丢失、快速迁移博客，都需要备份我们的blog。
 1. 博客根目录，执行 `git init` 创建 git 仓库。
 2. 在 github（或其他托管平台、自建远程仓库等） 创建仓库并和本地仓库建立联系。
