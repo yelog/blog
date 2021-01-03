@@ -19,7 +19,7 @@ tags:
 ```yaml
 language: zh-CN #支持 zh-CN、en
 ```
-
+[test](/3-hexo-add-icon)
 ### 1.2 关掉 hexo 自带的代码高亮
 
 主题内置了主题高亮，所以需要禁用 hexo 自带的高亮

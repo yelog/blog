@@ -1,6 +1,7 @@
 ---
 title: 3-hexo开发日志-持续更新
 date: 2017-03-13 15:44:57
+permalink: 3-hexo-logs
 top: 3
 categories:
 - 工具
