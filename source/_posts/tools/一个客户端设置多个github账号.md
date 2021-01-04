@@ -1,6 +1,6 @@
 ---
 title: 一个客户端设置多个github账号
-permalink: computer-mutiple-github-account
+enlink: computer-mutiple-github-account
 date: 2016-09-30 16:42:48
 categories:
 - 工具

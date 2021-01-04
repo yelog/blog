@@ -1,6 +1,6 @@
 ---
 title: docker报错集锦
-permalink: docker-errors
+enlink: docker-errors
 date: 2017-09-25 10:03:50
 categories: 运维
 tags:

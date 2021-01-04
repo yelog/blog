@@ -1,6 +1,6 @@
 ---
 title: linux无损调整分区大小
-permalink: linux无损调整分区大小
+enlink: linux无损调整分区大小
 date: 2017-05-17 22:00:42
 categories:
 - 运维

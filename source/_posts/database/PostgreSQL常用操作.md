@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL常用操作
-permalink: PostgreSQL-2
+enlink: PostgreSQL-2
 date: 2016-10-12 20:27:07
 categories:
 - 数据库

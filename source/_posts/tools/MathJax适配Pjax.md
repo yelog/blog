@@ -1,6 +1,6 @@
 ---
 title: MathJax适配Pjax
-permalink: MathJax-pjax
+enlink: MathJax-pjax
 date: 2017-07-05 19:24:10
 categories:
 - 工具

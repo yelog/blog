@@ -1,6 +1,6 @@
 ---
 title: pjax用法
-permalink: pjax
+enlink: pjax
 date: 2017-02-08 20:18:54
 categories:
 - 大前端

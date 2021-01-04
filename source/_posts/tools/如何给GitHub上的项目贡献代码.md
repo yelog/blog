@@ -1,6 +1,6 @@
 ---
 title: 如何给GitHub上的项目贡献代码
-permalink: contributing-to-open-source-on-github
+enlink: contributing-to-open-source-on-github
 date: 2016-10-13 15:44:07
 categories:
 - 工具

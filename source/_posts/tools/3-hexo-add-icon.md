@@ -1,6 +1,6 @@
 ---
 title: 3-hexo添加自定义图标
-permalink: 3-hexo-add-icon
+enlink: 3-hexo-add-icon
 date: 2020-12-28 22:00:00
 categories:
 - 工具

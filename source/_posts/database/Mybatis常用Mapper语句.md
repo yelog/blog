@@ -1,6 +1,6 @@
 ---
 title: Mybatis常用Mapper语句
-permalink: mybatis-Mapper
+enlink: mybatis-Mapper
 date: 2017-08-04 15:54:47
 categories:
 - 数据库

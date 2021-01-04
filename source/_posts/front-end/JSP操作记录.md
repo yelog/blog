@@ -1,6 +1,6 @@
 ---
 title: JSP操作记录
-permalink: jsp-use-record
+enlink: jsp-use-record
 date: 2017-04-21 11:22:12
 categories:
 - 大前端

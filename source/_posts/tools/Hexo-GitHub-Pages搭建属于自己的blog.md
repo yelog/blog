@@ -1,6 +1,6 @@
 ---
 title: Hexo+GitHub Pages搭建属于自己的blog
-permalink: hexo-gitHub-pages-create-own-blog
+enlink: hexo-gitHub-pages-create-own-blog
 date: 2016-10-22 21:24:05
 categories:
 - 工具

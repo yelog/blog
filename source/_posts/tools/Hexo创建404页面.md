@@ -1,6 +1,6 @@
 ---
 title: Hexo创建404页面
-permalink: hexo-create-404-page
+enlink: hexo-create-404-page
 date: 2017-02-25 15:18:39
 categories:
 - 工具
@@ -15,12 +15,12 @@ tags:
 ### 新建404页面
 1. 进入 Hexo 所在文件夹，输入 `hexo new page 404` ;
 2. 打开刚新建的页面文件，默认在 Hexo 文件夹根目录下 /source/404/index.md；
-3. 在顶部插入一行，写上 `permalink: /404`，这表示指定该页固定链接为 `http://"主页"/404.html`
+3. 在顶部插入一行，写上 `enlink: /404`，这表示指定该页固定链接为 `http://"主页"/404.html`
 
 ```xml
 ---
 title: 404
-permalink: /404
+enlink: /404
 date: 2016-09-27 11:31:01
 ---
 ---

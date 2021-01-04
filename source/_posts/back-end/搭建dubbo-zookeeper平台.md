@@ -1,6 +1,6 @@
 ---
 title: 搭建dubbo+zookeeper平台
-permalink: 搭建dubbo+zookeeper平台
+enlink: 搭建dubbo+zookeeper平台
 date: 2017-09-25 16:29:07
 categories: 后端
 tags:

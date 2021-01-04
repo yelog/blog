@@ -1,6 +1,6 @@
 ---
 title: 3-hexo评论设置
-permalink: 3-hexo-comment
+enlink: 3-hexo-comment
 date: 2020-05-23 22:26:23
 categories:
 - 工具

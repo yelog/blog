@@ -1,6 +1,6 @@
 ---
 title: docker仓库
-permalink: docker-registry
+enlink: docker-registry
 date: 2017-05-23 21:15:52
 categories:
 - 运维

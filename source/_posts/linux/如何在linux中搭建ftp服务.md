@@ -1,6 +1,6 @@
 ---
 title: 如何在linux中搭建ftp服务
-permalink: linux-ftp
+enlink: linux-ftp
 date: 2017-03-06 08:47:48
 categories:
 - 运维

@@ -1,6 +1,6 @@
 ---
 title: CentOS7安装配置匿名访问Samba
-permalink: CentOS7-anonymous-Samba
+enlink: CentOS7-anonymous-Samba
 date: 2017-07-03 19:40:14
 categories:
 - 运维

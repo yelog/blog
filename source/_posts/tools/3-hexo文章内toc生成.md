@@ -1,6 +1,6 @@
 ---
 title: 3-hexo文章内toc生成
-permalink: 3-hexo-toc
+enlink: 3-hexo-toc
 date: 2019-09-24 09:48:20
 categories:
 - 工具

@@ -1,6 +1,6 @@
 ---
 title: web.xml详解
-permalink: web-xml
+enlink: web-xml
 date: 2016-10-24 10:10:45
 categories:
 - 后端

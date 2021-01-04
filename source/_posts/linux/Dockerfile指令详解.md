@@ -1,6 +1,6 @@
 ---
 title: Dockerfile指令详解
-permalink: Dockerfile
+enlink: Dockerfile
 date: 2017-05-22 19:11:42
 categories:
 - 运维

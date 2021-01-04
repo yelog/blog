@@ -1,6 +1,6 @@
 ---
 title: npm使用介绍
-permalink: npm
+enlink: npm
 date: 2017-03-16 20:09:48
 categories:
 - 大前端

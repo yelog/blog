@@ -1,6 +1,6 @@
 ---
 title: hexo报错合集
-permalink: hexo-error-collection
+enlink: hexo-error-collection
 date: 2017-03-27 19:40:42
 categories:
 - 工具

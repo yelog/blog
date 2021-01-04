@@ -1,6 +1,6 @@
 ---
 title: 完美替代多说-gitment
-permalink: gitment
+enlink: gitment
 date: 2017-06-26 12:08:13
 categories:
 - 工具

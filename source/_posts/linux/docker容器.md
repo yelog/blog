@@ -1,6 +1,6 @@
 ---
 title: docker容器
-permalink: docker-container
+enlink: docker-container
 date: 2017-05-23 21:29:38
 categories:
 - 运维

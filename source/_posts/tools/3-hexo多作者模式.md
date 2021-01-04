@@ -1,6 +1,6 @@
 ---
 title: 3-hexo多作者模式
-permalink: 3-hexo-multiple-author
+enlink: 3-hexo-multiple-author
 date: 2017-02-28 10:55:31
 categories:
 - 工具

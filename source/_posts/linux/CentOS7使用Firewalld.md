@@ -1,6 +1,6 @@
 ---
 title: CentOS7使用Firewalld
-permalink: CentOS7使用Firewalld
+enlink: CentOS7使用Firewalld
 date: 2017-09-19 09:53:53
 categories:
 - 运维

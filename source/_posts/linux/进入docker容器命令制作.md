@@ -1,6 +1,6 @@
 ---
 title: 进入docker容器命令制作
-permalink: entering-docker
+enlink: entering-docker
 date: 2017-06-01 17:25:11
 categories:
 - 运维

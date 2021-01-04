@@ -1,6 +1,6 @@
 ---
 title: docker镜像
-permalink: docker-image
+enlink: docker-image
 date: 2017-05-19 16:47:33
 categories:
 - 运维

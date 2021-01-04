@@ -1,6 +1,6 @@
 ---
 title: 多说适配pjax
-permalink: duoshuo-pjax
+enlink: duoshuo-pjax
 date: 2017-03-09 19:50:45
 categories:
 - 大前端

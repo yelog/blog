@@ -1,6 +1,6 @@
 ---
 title: docker数据管理
-permalink: docker-data-manager
+enlink: docker-data-manager
 date: 2017-05-23 21:43:06
 categories:
 - 运维

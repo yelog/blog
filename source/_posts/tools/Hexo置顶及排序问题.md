@@ -1,6 +1,6 @@
 ---
 title: Hexo置顶及排序问题
-permalink: hexo-top-sort
+enlink: hexo-top-sort
 date: 2017-02-24 15:50:38
 categories:
 - 工具

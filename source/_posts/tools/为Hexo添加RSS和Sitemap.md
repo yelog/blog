@@ -1,6 +1,6 @@
 ---
 title: 为Hexo添加RSS和Sitemap
-permalink: Hexo-RSS-Sitemap
+enlink: Hexo-RSS-Sitemap
 date: 2017-03-14 09:44:29
 categories:
 - 工具

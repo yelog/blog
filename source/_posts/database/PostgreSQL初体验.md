@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL初体验
-permalink: PostgreSQL-1
+enlink: PostgreSQL-1
 date: 2016-10-12 19:49:40
 categories:
 - 数据库

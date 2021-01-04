@@ -1,6 +1,6 @@
 ---
 title: '[转]浏览器前进/后退缓存（BF Cache）'
-permalink: bf-cache
+enlink: bf-cache
 date: 2017-09-21 15:35:24
 categories:
 - 大前端

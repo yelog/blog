@@ -1,6 +1,6 @@
 ---
 title: shell速查表
-permalink: shell-command
+enlink: shell-command
 date: 2018-09-08 11:48:24
 categories: 运维
 tags:

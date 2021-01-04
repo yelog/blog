@@ -1,6 +1,6 @@
 ---
 title: Docker 技术整理
-permalink: Docker-summary
+enlink: Docker-summary
 date: 2020-09-01 22:11:00
 categories:
 - 运帷

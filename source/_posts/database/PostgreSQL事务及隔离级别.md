@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL事务及隔离级别
-permalink: PostgreSQL事物及隔离级别
+enlink: PostgreSQL事物及隔离级别
 date: 2017-11-09 00:07:33
 categories: 数据库
 tags:

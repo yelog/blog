@@ -1,6 +1,6 @@
 ---
 title: reading-list
-permalink: reading-list
+enlink: reading-list
 date: 2017-01-31 15:29:32
 categories:
 - 读书

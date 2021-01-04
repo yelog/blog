@@ -1,6 +1,6 @@
 ---
 title: AngularJs快速入门
-permalink: AngularJs
+enlink: AngularJs
 date: 2017-03-04 08:40:58
 categories:
 - 大前端

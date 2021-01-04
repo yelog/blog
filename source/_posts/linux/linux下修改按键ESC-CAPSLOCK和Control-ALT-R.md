@@ -1,6 +1,6 @@
 ---
 title: linux下修改按键ESC<=>CAPSLOCK和Control=>ALT_R
-permalink: linux下修改按键ESC<=>CAPSLOCK和Control=>ALT_R
+enlink: linux下修改按键ESC<=>CAPSLOCK和Control=>ALT_R
 date: 2017-10-20 17:38:49
 categories:
 - 运维

@@ -1,6 +1,6 @@
 ---
 title: Hexo主题3-hexo
-permalink: 3-hexo
+enlink: 3-hexo
 date: 2017-03-07 11:15:50
 categories:
 - 工具

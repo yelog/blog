@@ -1,6 +1,6 @@
 ---
 title: deepin系统使用记录
-permalink: deepin-linux
+enlink: deepin-linux
 date: 2017-03-30 18:58:50
 categories:
 - 工具

@@ -1,6 +1,6 @@
 ---
 title: FreeMarker语法详解
-permalink: FreeMarker
+enlink: FreeMarker
 date: 2016-10-05 11:58:50
 categories:
 - 大前端

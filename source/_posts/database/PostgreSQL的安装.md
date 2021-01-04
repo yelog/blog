@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL的介绍与安装
-permalink: PostgreSQL-3
+enlink: PostgreSQL-3
 date: 2016-10-12 15:44:16
 categories:
 - 数据库

@@ -1,6 +1,6 @@
 ---
 title: idea常用快捷键
-permalink: idea-shortcuts
+enlink: idea-shortcuts
 date: 2016-11-05 15:22:48
 categories:
 - 工具

@@ -1,7 +1,7 @@
 ---
 title: 3-hexo快捷键说明
 date: 2017-03-24 16:45:31
-permalink: 3-hexo-shortcuts
+enlink: 3-hexo-shortcuts
 categories:
 - 工具
 - hexo

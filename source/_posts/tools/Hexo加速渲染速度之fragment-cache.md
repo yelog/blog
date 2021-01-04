@@ -1,6 +1,6 @@
 ---
 title: Hexo加速渲染速度之fragment_cache
-permalink: hexo-fragment_cache
+enlink: hexo-fragment_cache
 date: 2017-09-21 19:34:37
 categories:
 - 工具

@@ -1,6 +1,6 @@
 ---
 title: Git操作之高手过招
-permalink: git-master
+enlink: git-master
 date: 2016-12-23 10:59:01
 categories:
 - 工具

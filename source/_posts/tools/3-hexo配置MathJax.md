@@ -1,6 +1,6 @@
 ---
 title: 3-hexo配置MathJax数学公式渲染
-permalink: 3-hexo-mathjax
+enlink: 3-hexo-mathjax
 date: 2017-07-05 15:09:42
 mathjax: true
 categories:

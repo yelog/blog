@@ -1,6 +1,6 @@
 ---
 title: sudo命令免密码设置
-permalink: sudo命令免密码设置
+enlink: sudo命令免密码设置
 date: 2017-09-11 09:30:55
 categories: 运维
 tags:

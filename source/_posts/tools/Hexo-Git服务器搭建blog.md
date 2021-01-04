@@ -1,6 +1,6 @@
 ---
 title: Hexo+Git服务器搭建blog
-permalink: hexo-git-server-blog
+enlink: hexo-git-server-blog
 date: 2016-10-23 09:24:03
 categories:
 - 工具

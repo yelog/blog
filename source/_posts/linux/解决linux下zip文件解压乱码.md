@@ -1,6 +1,6 @@
 ---
 title: 解决linux下zip文件解压乱码
-permalink: 解决linux下zip文件解压乱码
+enlink: 解决linux下zip文件解压乱码
 date: 2017-04-25 09:10:40
 categories:
 - 运维

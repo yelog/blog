@@ -1,6 +1,6 @@
 ---
 title: jQuery选择器与节点操作
-permalink: jQuery-selector
+enlink: jQuery-selector
 date: 2016-11-22 17:11:48
 categories:
 - 大前端

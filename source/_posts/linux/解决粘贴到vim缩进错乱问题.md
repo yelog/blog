@@ -1,6 +1,6 @@
 ---
 title: 解决粘贴到vim缩进错乱问题
-permalink: vim-paste
+enlink: vim-paste
 date: 2017-06-01 19:45:24
 categories:
 - 运维

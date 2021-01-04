@@ -1,6 +1,6 @@
 ---
 title: 解决iphone下后退不执行js的问题
-permalink: iphone-bf-no-run-js
+enlink: iphone-bf-no-run-js
 date: 2017-09-21 15:25:32
 categories:
 - 大前端

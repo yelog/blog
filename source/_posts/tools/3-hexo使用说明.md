@@ -1,6 +1,6 @@
 ---
 title: 3-hexo使用说明
-permalink: 3-hexo-instruction
+enlink: 3-hexo-instruction
 date: 2017-03-23 15:13:47
 top: 2
 categories:

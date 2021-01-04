@@ -1,6 +1,6 @@
 ---
 title: CentOS修改DNS/GW/IP
-permalink: CentOS-DNS-GW-IP
+enlink: CentOS-DNS-GW-IP
 date: 2017-05-23 09:53:52
 categories:
 - 运维

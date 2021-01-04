@@ -1,6 +1,6 @@
 ---
 title: Git之SSH与HTTPS免密码配置
-permalink: Git-SSH-HTTPS-verify-configuration
+enlink: Git-SSH-HTTPS-verify-configuration
 date: 2016-12-21 15:31:55
 categories:
 - 工具

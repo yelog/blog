@@ -1,6 +1,6 @@
 ---
 title: tale博客搭建及体验
-permalink: tale-build-experience
+enlink: tale-build-experience
 date: 2017-05-24 11:29:30
 categories:
 - 工具

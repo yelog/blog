@@ -1,6 +1,6 @@
 ---
 title: '[转]谈谈Java中的语法糖'
-permalink: 'java-grammatical-sugar'
+enlink: 'java-grammatical-sugar'
 date: 2017-11-27 22:51:45
 categories: 后端
 tags:

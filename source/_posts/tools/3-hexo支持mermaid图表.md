@@ -1,6 +1,6 @@
 ---
 title: 3-hexo支持mermaid图表
-permalink: 3-hexo-support-mermaid
+enlink: 3-hexo-support-mermaid
 date: 2019-11-12 09:55:37
 categories:
 - 工具

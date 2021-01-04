@@ -1,6 +1,6 @@
 ---
 title: '[译]Java内存泄露介绍'
-permalink: 'the-introduction-of-memory-leak-what-why-and-how'
+enlink: 'the-introduction-of-memory-leak-what-why-and-how'
 date: 2017-02-21 15:05:39
 categories:
 - 后端

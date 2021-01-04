@@ -1,6 +1,6 @@
 ---
 title: 一文看懂JavaScript中的Promise
-permalink: know-javascript-promise
+enlink: know-javascript-promise
 date: 2020-10-20 19:43:44
 categories:
 - 大前端

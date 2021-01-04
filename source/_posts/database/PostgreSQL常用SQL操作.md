@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL常用SQL操作
-permalink: postgres-sql-use
+enlink: postgres-sql-use
 date: 2017-04-14 16:37:24
 categories:
 - 数据库

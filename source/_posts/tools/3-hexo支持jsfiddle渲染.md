@@ -1,6 +1,6 @@
 ---
 title: 3-hexo支持jsfiddle渲染
-permalink: 3-hexo-jsfiddle
+enlink: 3-hexo-jsfiddle
 date: 2019-09-24 09:59:37
 categories:
 - 工具

@@ -1,6 +1,6 @@
 ---
 title: nginx配置记录
-permalink: nginx-config
+enlink: nginx-config
 date: 2018-02-08 09:19:09
 categories: 运维
 tags:

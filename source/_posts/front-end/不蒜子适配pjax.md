@@ -1,6 +1,6 @@
 ---
 title: 不蒜子适配pjax
-permalink: busuanzi-pjax
+enlink: busuanzi-pjax
 date: 2017-03-09 20:15:51
 categories:
 - 大前端

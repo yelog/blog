@@ -1,6 +1,6 @@
 ---
 title: jQuery之checkbox|radio|select操作
-permalink: jQuery-checkbox-radio-select
+enlink: jQuery-checkbox-radio-select
 date: 2016-11-23 16:19:34
 categories:
 - 大前端

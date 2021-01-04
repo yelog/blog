@@ -1,7 +1,7 @@
 ---
 title: 3-hexo配置首页
 date: 2017-03-13 09:56:07
-permalink: 3-hexo-homepage
+enlink: 3-hexo-homepage
 categories:
 - 工具
 - hexo

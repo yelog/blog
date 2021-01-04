@@ -1,6 +1,6 @@
 ---
 title: 3-hexo 添加音乐插件
-permalink: 3-hexo-add-music
+enlink: 3-hexo-add-music
 date: 2019-10-08 10:44:30
 categories:
 - 工具

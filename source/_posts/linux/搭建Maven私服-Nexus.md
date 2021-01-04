@@ -1,6 +1,6 @@
 ---
 title: 搭建Maven私服-Nexus
-permalink: build-Maven-Nexus
+enlink: build-Maven-Nexus
 date: 2017-09-06 23:01:31
 categories: 运维
 tags:

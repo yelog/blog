@@ -1,6 +1,6 @@
 ---
 title: '[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）'
-permalink: 'ascii-ansi-unicode-utf-8）'
+enlink: 'ascii-ansi-unicode-utf-8'
 date: 2017-09-25 19:15:00
 categories: 运维
 tags:

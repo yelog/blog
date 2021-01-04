@@ -1,6 +1,6 @@
 ---
 title: windows环境下使用hexo搭建blog平台
-permalink: windows-hexo
+enlink: windows-hexo
 date: 2017-03-17 14:02:55
 categories:
 - 工具
