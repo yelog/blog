@@ -1,6 +1,6 @@
 ---
 title: Git之SSH与HTTPS免密码配置
-enlink: Git-SSH-HTTPS-verify-configuration
+enlink: git-ssh-https-verify-configuration
 date: 2016-12-21 15:31:55
 categories:
 - 工具
@@ -37,7 +37,7 @@ $ ssh-keygen -t rsa -C "xx@xx.com"
 如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。
 然后将生成的 `.pub` 文件内容，导入到git服务器 `/home/git/.ssh/authorized_keys` 文件内，一行一个。
 然后你就会发现git push 不再需要密码了
-搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 {% post_link set-up-git-server-on-vps %}
+搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 {% post_link tools/set-up-git-server-on-vps %}
 
 ## HTTPS通信协议
 上面讲了SSH方式的免密码，接下来讲一下越来越常用的HTTPS方式的免密码

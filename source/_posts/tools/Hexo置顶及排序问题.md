@@ -69,7 +69,7 @@ tags:
 
 ## 2020-05-20 更新
 
-3-hexo 主题已经内置排序算法，无需上面下载插件或修改源码，可以直接使用，具体可看 {% post_link  3-hexo-instruction %} 中的排序相关内容
+3-hexo 主题已经内置排序算法，无需上面下载插件或修改源码，可以直接使用，具体可看 {% post_link  tools/3-hexo-instruction %} 中的排序相关内容
 
 ## References
 

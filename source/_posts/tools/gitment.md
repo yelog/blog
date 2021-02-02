@@ -8,7 +8,7 @@ categories:
 tags:
 - hexo
 ---
-自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 {% post_link the-third-comment %} 。忽然看到作者 孙士权 的一片文章 [Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/) 。
+自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 {% post_link tools/the-third-comment %} 。忽然看到作者 孙士权 的一片文章 [Gitment：使用 GitHub Issues 搭建评论系统](https://imsun.net/posts/gitment-introduction/) 。
 
 立即就将 `gitment` 集成到 `3-hexo` 主题内。本篇文章只讲在 `3-hexo` 内如何使用，如果想自定义，可以参考上面原文。
 

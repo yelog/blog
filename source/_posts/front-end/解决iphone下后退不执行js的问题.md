@@ -14,4 +14,4 @@ window.addEventListener('pageshow', function () {
   console.log('on pageshow')
 })
 ```
-`浏览器缓存行为` 的详细介绍可以参考： {% post_link  bf-cache %}
+`浏览器缓存行为` 的详细介绍可以参考： {% post_link  front-end/bf-cache %}
