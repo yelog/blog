@@ -1,6 +1,6 @@
 ---
 title: Git常用命令
-enlink: Git-command
+enlink: git-command
 date: 2016-10-02 17:15:39
 categories:
 - 工具

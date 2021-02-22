@@ -1,6 +1,6 @@
 ---
 title: Hexo加入字数统计WordCount
-enlink: Hexo-WordCount
+enlink: hexo-wordcount
 date: 2017-03-09 16:57:10
 categories:
 - 工具
