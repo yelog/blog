@@ -114,8 +114,8 @@ theme: 3-hexo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  #repo: git@github.com:yelog/yelog.github.io.git 
-  repo: https://github.com/yelog/yelog.github.io.git
+  repo: git@github.com:yelog/yelog.github.io.git 
+  #repo: https://github.com/yelog/yelog.github.io.git
   #repo: git@gitee.com:saodiyang/blog.git
   branch: master
   message: "Site updateed: {{ now('YYYY-MM-DD HH:mm:ss') }}"
