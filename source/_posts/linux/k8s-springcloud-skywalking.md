@@ -1,7 +1,7 @@
 ---
 title: SpringCloud系列之接入SkyWalking进行链路追踪和日志收集
-enlink: mybatis-Mapper
-date: 2017-08-04 15:54:47
+enlink: spring-cloud-skywalking
+date: 2021-09-26 18:08:00
 categories:
 - 后端
 tags:
