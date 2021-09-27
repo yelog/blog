@@ -118,4 +118,4 @@ deploy:
   #repo: https://github.com/yelog/yelog.github.io.git
   #repo: git@gitee.com:saodiyang/blog.git
   branch: master
-  message: "Site updateed: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
