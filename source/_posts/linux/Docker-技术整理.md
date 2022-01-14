@@ -3,7 +3,7 @@ title: Docker 技术整理
 enlink: Docker-summary
 date: 2020-09-01 22:11:00
 categories:
-- 运帷
+- 运维
 tags:
 - linux
 - docker
