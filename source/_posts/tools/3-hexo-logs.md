@@ -13,6 +13,10 @@ tags:
 
 ## 2022年02
 
+### 02-22
+1. `fix` jquery dom selector contains special symbols cause errors
+2. `fix` Script could run successfully in the case of errors synchronizing TOC
+
 ### 02-16
 
 1. `fix` 修复首页使用自定义 html 标题时，大纲和文章关联关系丢失报错的问题
