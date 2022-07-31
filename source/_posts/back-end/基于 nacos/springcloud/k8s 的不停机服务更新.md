@@ -1,6 +1,6 @@
 ---
 title: '基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]'
-enlink: 'the-introduction-of-memory-leak-what-why-and-how'
+enlink: 'springboot-graceful-shutdown-based-on-nacos2-and-k8s'
 date: 2022-07-27 15:35:39
 categories:
 - 后端
