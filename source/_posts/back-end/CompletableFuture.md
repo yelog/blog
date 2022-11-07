@@ -206,14 +206,20 @@ log.info("countSuccess cost: " + (countSuccessEnd - countScoreLess1000End));
 log.info("all cost: " + (countSuccessEnd - start));
 ```
 
-顺序执行的平均时间如下
-```bash
-countScoreLess1000 cost: 368
-countSuccess cost: 404
-all cost: 772
-```
-
 当我们应用的上面的工具类后的调用方法
+```java
+MultiTask multiTask = new MultiTask<>();
+multiTask.addTask(t -> {
+    testMapper.countScoreLess1000(userId);
+    log.info("countScoreLess1000 cost: " + (System.currentTimeMillis() - start));
+}).addTask(t -> {
+    testMapper.countSuccess(userId);
+    log.info("countSuccess cost: " + (System.currentTimeMillis() - start));
+}).execute();
+
+log.info("all cost: " + (System.currentTimeMillis() - start));
+```
+效果如下
 ```bash
 countScoreLess1000 cost: 433
 countSuccess cost: 463
