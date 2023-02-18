@@ -72,6 +72,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 /**
  * 执行并发任务
@@ -97,16 +99,26 @@ public class MultiTask<T> {
     }
 
     /**
-     * 添加待执行的任务
+     * 添加待执行的任务(无返回)
      *
-     * @param consumer 任务
+     * @param task 任务
      * @return 当前对象
      */
-    public MultiTask<T> addTask(Consumer<T> consumer) {
+    public MultiTask<T> addTask(Consumer<T> task) {
         addTask(CompletableFuture.supplyAsync(() -> {
-            consumer.accept(null);
+            task.accept(null);
             return null;
         }));
+        return this;
+    }
+    /**
+     * 添加待执行的任务(有返回)
+     *
+     * @param task 任务
+     * @return 当前对象
+     */
+    public MultiTask<T> addTask(Function<Object, T> task) {
+        addTask(CompletableFuture.supplyAsync(() -> task.apply(null)));
         return this;
     }
 
@@ -204,6 +216,13 @@ long countSuccessEnd = System.currentTimeMillis();
 log.info("countSuccess cost: " + (countSuccessEnd - countScoreLess1000End));
 
 log.info("all cost: " + (countSuccessEnd - start));
+```
+
+顺序执行的平均时间如下
+```bash
+countScoreLess1000 cost: 368
+countSuccess cost: 404
+all cost: 772
 ```
 
 当我们应用的上面的工具类后的调用方法
