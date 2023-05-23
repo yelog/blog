@@ -13,6 +13,10 @@ tags:
 
 ## 2023年05
 
+### 05-23
+
+1. `fix` 修复设置宽度后，背景不全 fixes [#123](https://github.com/yelog/hexo-theme-3-hexo/issues/123)
+
 ### 05-19
 1. `fix` 修复隐藏文章后, 左侧分类上的文章数量不对的问题
 
