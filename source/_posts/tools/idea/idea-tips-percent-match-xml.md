@@ -30,3 +30,7 @@ set matchit
 ## 效果
 
 ![](https://img.saodiyang.com/picgo_qiniu2023-06-17%2016.23.45.gif)
+
+## 最后
+
+最近会把一些加的 tips 分享出来，大家有什么建议和问题都可以在评论区讨论.
