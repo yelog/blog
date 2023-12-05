@@ -1,6 +1,6 @@
 ---
 title: el-drawer 实现鼠标拖拽宽度[ElementUI]
-enlink: Fortress-Besieged
+enlink: el-drawer-drag-width
 date: 2022-06-24 19:38:00
 categories:
 - 大前端
