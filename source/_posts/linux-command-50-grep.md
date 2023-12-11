@@ -68,7 +68,7 @@ $ grep [option] pattern file
 　　`\W`   #`\w`的反置形式，匹配一个或多个非单词字符，如点号句号等。   
 　　`\b`   #单词锁定符，如: `'\bgrep\b'`只匹配grep。  
 **POSIX字符**
-　　为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如[A- Za-z0-9]或[[:alnum:]]。在linux下的grep除fgrep外，都支持POSIX的字符类。
+　　为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如`[A-Za-z0-9]`或`[[:alnum:]]`。在linux下的grep除fgrep外，都支持POSIX的字符类。
 　　[:alnum:]    #文字数字字符   
 　　[:alpha:]    #文字字符   
 　　[:digit:]    #数字字符   

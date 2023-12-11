@@ -12,7 +12,7 @@ tags:
 
 ## 软件介绍
 
-![Raycast](https://img.saodiyang.com/picgo_qiniu202305171806863.png)
+![Raycast](https://img.saodiyang.com/picgo_qiniu202305171806865.png)
 
 最近在很多平台上看到 Raycast 的推荐文章, 今天就尝试了一下, 发现确实不错, 完全可以替代我目前对 Alfred 的使用, 甚至很多地方做得更好, 所以本文就是介绍我使用 Raycast 的一些效果(多图预警)， 方便那些还没有接触这个软件的人对它有个了解, 如果有插件推荐, 欢迎在评论区进行讨论。
 
