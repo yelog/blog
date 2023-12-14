@@ -34,13 +34,13 @@ highlight:
 ## 二、功能相关
 ### 2.1 自定义首页
 
-可查看这篇文章： {% post_link tools/3-hexo-homepage  %}
+可查看这篇文章： {% post_link 3-hexo-homepage  %}
 
 ### 2.3 blog快捷键
-可查看这篇文章： {% post_link tools/3-hexo-shortcuts %}
+可查看这篇文章： {% post_link 3-hexo-shortcuts %}
 
 ### 2.4 多作者模式
-可查看这篇文章： {% post_link tools/3-hexo-multiple-author %}
+可查看这篇文章： {% post_link 3-hexo-multiple-author %}
 
 ### 2.5 开启`关于`页面
 1. 在 `hexo` 根目录执行以下，创建 `关于` 页面
@@ -58,10 +58,10 @@ menu:
 ```
 
 ### 2.6 添加音乐插件
-{% post_link  tools/3-hexo-add-music %}
+{% post_link  3-hexo-add-music %}
 
 ### 2.7 配置评论系统
-{% post_link  tools/3-hexo-comment %}
+{% post_link  3-hexo-comment %}
 
 ## 三、样式设置
 ### 3.1 代码高亮
@@ -162,7 +162,7 @@ favicon: /img/avatar.jpg
 
 ### 3.7 设置链接图标
 
-> 如果需要自定义图标可以看这篇文章 {% post_link tools/3-hexo-add-icon %}
+> 如果需要自定义图标可以看这篇文章 {% post_link 3-hexo-add-icon %}
 
 如下，如果没有连接，则不展示图标。
 ```yaml

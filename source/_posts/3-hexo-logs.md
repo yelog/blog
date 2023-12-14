@@ -103,7 +103,7 @@ tags:
 ### 05-20
 
 1. `enhance` 内置文章排序，无需再引入排序插件或修改源代码
-2. `enhance` 支持自定义分类的顺序， 具体可以查看 {% post_link  tools/3-hexo-instruction %} 中的排序相关内容
+2. `enhance` 支持自定义分类的顺序， 具体可以查看 {% post_link  3-hexo-instruction %} 中的排序相关内容
 
 ### 05-19
 
@@ -123,15 +123,15 @@ tags:
 ### 11-12
 
 1.`fix`: 修复 hexo4.0 版本链接外跳的问题
-2.`add`: 支持 mermaid {% post_link tools/3-hexo-support-mermaid %}
+2.`add`: 支持 mermaid {% post_link 3-hexo-support-mermaid %}
 
 ### 09-24
 
-1.`add`: 支持文章内 toc 生成 {% post_link tools/3-hexo-toc %}
+1.`add`: 支持文章内 toc 生成 {% post_link 3-hexo-toc %}
 
 ### 09-05
 
-1.`fix`: `pjax` 兼容 `jsfiddle` 的渲染 {% post_link tools/3-hexo-jsfiddle %}
+1.`fix`: `pjax` 兼容 `jsfiddle` 的渲染 {% post_link 3-hexo-jsfiddle %}
 
 ## 2019年8月
 ### 08-20
@@ -255,18 +255,18 @@ tags:
 
 ## 2017年9月
 ### 09-21
-1. `polish` : 引入`fragment_cache`局部缓存，大幅缩减渲染(hexo g)的时间 {% post_link tools/hexo-fragment_cache %}
+1. `polish` : 引入`fragment_cache`局部缓存，大幅缩减渲染(hexo g)的时间 {% post_link hexo-fragment_cache %}
 2. `enhance` : 加入 SEO ，tag转keywords , title转description
 3. `add` : 添加文末说明参数
 4. `lit` : 头像跳转首页的请求也处理为 pjax
 
 ## 2017年7月
 ### 07-05 添加MathJax数学公式支持
-1. `add` : 添加MathJax数学公式支持 {% post_link tools/3-hexo-mathjax %}
+1. `add` : 添加MathJax数学公式支持 {% post_link 3-hexo-mathjax %}
 
 ## 2017年6月
 ### 06-26 添加gitment评论系统
-1. `add` : 添加gitment评论系统，具体可参考 {% post_link tools/gitment %}
+1. `add` : 添加gitment评论系统，具体可参考 {% post_link gitment %}
 
 ## 2017年4月
 ### 04-27 调整样式
@@ -290,7 +290,7 @@ tags:
 1. `fix:`修复title关键字和标签关键字冲突的情况
 2. `fix:`修复前进后退时对图片的错误处理
 3. `enhance:`在搜索时，可以键盘上下键来选择文章
-3. `enhance:`添加了一些快捷键，详情查看 {% post_link tools/3-hexo-shortcuts %}
+3. `enhance:`添加了一些快捷键，详情查看 {% post_link 3-hexo-shortcuts %}
 
 ### 03-22 添加评论系统
 1. `enhance:` 添加网易云跟帖评论系统
@@ -308,7 +308,7 @@ tags:
 ### 03-18 动画优化及修复bug
 1. `enhance:`给所有锚点添加动画
 2. `fix:`修复文章列表页自适应宽度,解决由于firefox不支持自定义滚动条导致的错位
-3. `change:`改动页面内站点访问量统计的标签，改动查看 — {% post_link tools/3-hexo-homepage %}
+3. `change:`改动页面内站点访问量统计的标签，改动查看 — {% post_link 3-hexo-homepage %}
 
 ### 03-17 评论调整优化
 1. 修复预加载时的评论数
