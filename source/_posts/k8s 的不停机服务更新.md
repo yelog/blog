@@ -32,7 +32,7 @@ tags:
 7. 完成了服务不中断的应用升级
 
 ## 实现关键点
-为了实现上面背景中提到的思路, 主要从一下几个方面入手
+为了实现上面背景中提到的思路, 主要从如下几个方面入手
 
 ### 创建从 nacos 中下线副本的API
 我们通过创建自定义名为 `deregister` 的 `endpoint` 来通知 `nacos` 下线副
@@ -88,7 +88,7 @@ public class LemesNacosServiceDeregisterEndpoint {
 ```
 
 ### 支持 Graceful Shutdown
-由于 springboot 原生支持, 我们只需要在 `bootstrap.yaml` 中添加一下配置即可
+由于 springboot 原生支持, 我们只需要在 `bootstrap.yaml` 中添加如下配置即可
 
 ```yaml
 server:

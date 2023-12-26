@@ -17,11 +17,11 @@ tags:
 同时因为 spring-boot 的版本问题, 需要将 maven 升级到 3.6.3+
 
 
-![](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111837604.png)
+![maven version](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111837604.png)
 
 升级后构建 jar 包和构建镜像都是正常的, 但是发布到测试环境就报错 `Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher`
 
-![](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111851862.png)
+![error log](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111851862.png)
 
 ## 问题分析
 
@@ -39,7 +39,7 @@ docker cp dumy:/data .
 ```
 到本地后, 就可以通过合适的工具查找 `JarLauncher` 文件, 我这里通过 `vim` 来寻找, 如下图:
 
-![](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111902709.png)
+![JarLauncher Path](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111902709.png)
 
 发现比原来多了一层目录 `launch`, 所以问题就发生在这里了.
 
@@ -47,7 +47,7 @@ docker cp dumy:/data .
 
 我们在打包脚本 `JenkinsCommon.groovy` 中根据当前打包的 JDK 版本来判断使用的启动类路径, 如下:
 
-![](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111905161.png)
+![Jenkins](https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111905161.png)
 
 再次打包, 应用正常启动.
 
