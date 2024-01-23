@@ -63,7 +63,7 @@ tags:
 
 英文国际化的列或标签，请使用开头字母大写的方式，如: `UserId`、`Status`、`UserName`。
 
-![image-20211227175812563](https://img.saodiyang.com/picgo_qiniuimage-20211227175812563.png)
+![image-20211227175812563](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniuimage-20211227175812563.png)
 
 ### 2.3 组件使用
 
@@ -90,7 +90,7 @@ tags:
 
 按钮颜色：普通的 查询/修改/操作 等按钮使用蓝色 `type="primary"`，新增使用绿色 `type="success"`，删除等“危险”操作使用红色 `type="danger"`。推荐给按钮添加图标，可在 [element-ui-icon](https://element.eleme.cn/#/zh-CN/component/icon) 寻找合适的图标。
 
-![image-20211227172602560](https://img.saodiyang.com/picgo_qiniuimage-20211227172602560.png)
+![image-20211227172602560](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniuimage-20211227172602560.png)
 
 
 
@@ -121,7 +121,7 @@ tags:
 </el-form>
 ```
 
-![image-20211227170528261](https://img.saodiyang.com/picgo_qiniuimage-20211227170528261.png)
+![image-20211227170528261](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniuimage-20211227170528261.png)
 
 #### 2.4.2 查询表单+表格
 
@@ -134,6 +134,6 @@ tags:
 
 最终效果如下：
 
-![image-20211227174221673](https://img.saodiyang.com/picgo_qiniuimage-20211227174221673.png)
+![image-20211227174221673](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniuimage-20211227174221673.png)
 
 

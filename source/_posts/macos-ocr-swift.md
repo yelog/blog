@@ -1,5 +1,5 @@
 ---
-title: swift 在图像中识别文字(ocr)
+title: swift 离线图片识别文字(ocr)
 enlink: macos-ocr-swift
 date: 2024-01-02 10:09:19
 categories:
@@ -13,7 +13,9 @@ tags:
 
 ## 背景
 
-最近打算写一个 macos 翻译软件, 需要用到 ocr 图像识别, 经过翻阅文档和 chatgpt 拉扯了一下午, 最终成功实现.
+最近打算写一个 macos 翻译软件, 需要用到 ocr 图像识别, 并且因为速度问题, 一开始就考虑使用系统的自带能力来实现.
+
+经过翻阅文档和 chatgpt 拉扯了一下午, 最终成功实现.
 
 
 ## 代码

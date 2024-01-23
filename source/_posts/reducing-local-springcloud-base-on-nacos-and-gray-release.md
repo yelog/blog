@@ -16,7 +16,7 @@ tags:
 
 后台框架是基于 spring cloud 的微服务体系, 当开发同学在自己电脑上进行开发工作时, 比如开发订单模块, 除了需要启动订单模块外, 还需要启动网关模块、权限校验模块、公共服务模块等依赖模块, 非常消耗开发同学的本地电脑的资源, 也及其浪费时间.
 
-![Spring Cloud](https://img.saodiyang.com/picgo_qiniu20220801233224.png)
+![Spring Cloud](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220801233224.png)
 
 ## 二、解决方案
 
@@ -36,11 +36,11 @@ tags:
 
 假设我们需要开发的 API 的后台服务调用链条如下:
 
-![请求调用](https://img.saodiyang.com/picgo_qiniu20220802004250.png)
+![请求调用](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802004250.png)
 
 我们需要开发的 API 为 `/addMo`, 打算写在 `Order` 这个微服务里面, 并且他会调用 `common` 这个微服务的 `/getDict` 获取一个字典数据, `/getDict` 是现成的, 不需要开发, 如果是之前的情况, 开发本地至少需要启动5个微服务才能进行调试.
 
-![实现效果](https://img.saodiyang.com/picgo_qiniu20220802004109.png)
+![实现效果](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802004109.png)
 
 ## 三、具体实现
 
@@ -96,7 +96,7 @@ CMD echo "NACOS_ADDR: ${NACOS_ADDR}"; \
     org.springframework.boot.loader.JarLauncher
 
 ```
-![set nacos metadata](https://img.saodiyang.com/picgo_qiniu20220802135945.png)
+![set nacos metadata](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802135945.png)
 
 ### 3.2 开发前端传递开启智能连接
 

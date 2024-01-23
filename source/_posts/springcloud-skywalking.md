@@ -148,8 +148,8 @@ java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_n
 
 执行命令启动后，访问以下接口，就可以在第一步 `服务ip:8080` 中看到访问的链接和调用链路。
 
-![链路追踪](https://img.saodiyang.com/picgo_qiniu20210926164151.png)
-![拓扑图](https://img.saodiyang.com/picgo_qiniu20210926164350.png)
+![链路追踪](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164151.png)
+![拓扑图](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png)
 
 ### 4. 开启日志收集
 
@@ -240,28 +240,28 @@ java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_n
 
 这样启动日志中就会打印 traceid , `N/A` 代表的是非请求的日志，有 traceid 的为 api 请求日志
 
-![traceid](https://img.saodiyang.com/picgo_qiniu20210926170409.png)
+![traceid](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170409.png)
 
 在 skywalking 中就能看到我们上报的日志
 
-![skywalking 日志上报](https://img.saodiyang.com/picgo_qiniu20210926170953.png)
+![skywalking 日志上报](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170953.png)
 
 重点：SkyWalking 可以在链路追踪中查看当前请求的所有日志（不同实例/模块）
 
-![SkyWalking 链路日志](https://img.saodiyang.com/picgo_qiniu20210926171217.png)
+![SkyWalking 链路日志](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926171217.png)
 
-![SkyWalking 链路日志](https://img.saodiyang.com/picgo_qiniu20210926171256.png)
+![SkyWalking 链路日志](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926171256.png)
 
 ### 5. 兼容 spring-cloud-gateway
 
 经过上面的步骤之后，链路已经搭建完成，查看发现了一个问题，gateway 模块的 `traceId` 和 业务模块的 `traceId` 不统一。
 
-![拓扑图](https://img.saodiyang.com/picgo_qiniu20210926164350.png)
+![拓扑图](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png)
 
 
 这是由于 SkyWalking 对于 `spring-cloud-gateway` 的支持不是默认的，所以需要将 `agent/optional-plugins/apm-spring-cloud-gateway-2.1.x-plugin-8.7.0.jar` 复制到 `agent/plugins` 下，然后重启即可。
 
-![优化过 gateway 的拓扑图](https://img.saodiyang.com/picgo_qiniu20210926180619.png)
+![优化过 gateway 的拓扑图](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926180619.png)
 
 ## 最后
 

@@ -11,7 +11,7 @@ tags:
 
 ### 实现效果
 
-![el-drawer-drag-width](https://img.saodiyang.com/picgo_qiniu2022-06-25%2010.12.32.gif)
+![el-drawer-drag-width](https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu2022-06-25%2010.12.32.gif)
 
 ### 实现思路
 

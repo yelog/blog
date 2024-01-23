@@ -24,12 +24,21 @@ language: zh-CN #支持 zh-CN、en
 
 主题内置了主题高亮，所以需要禁用 hexo 自带的高亮
 
+根据 `hexo` 版本, 禁用的方式发生了变化 [禁用高亮](https://hexo.io/docs/syntax-highlight#Disabled)
+
+below v7.0.0
+
 ```yaml
+# _config.yaml
 highlight:
 	enable: false
 ```
 
-
+7.0.0+
+```yaml
+# _config.yml
+syntax_highlighter:  # empty
+```
 
 ## 二、功能相关
 ### 2.1 自定义首页
