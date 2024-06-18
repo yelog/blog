@@ -25,7 +25,7 @@ Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源
 ## 搭建过程
 ### 环境准备
 #### 在服务器上安装git并创建git远程仓库 如 `blog.git`
-搭建过程移步 {% post_link tools/set-up-git-server-on-vps %}
+搭建过程移步 {% post_link set-up-git-server-on-vps %}
 #### 在 `_config.yml` 中配置git服务器
 ```xml
 deploy:

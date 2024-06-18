@@ -51,7 +51,7 @@ $ hexo server
 #### 注册github账户
 到[github官网](https://github.com/)注册一个github账户
 #### 配置登录免密码
-移步 {% post_link tools/git-ssh-https-verify-configuration %}
+移步 {% post_link git-ssh-https-verify-configuration %}
 #### 创建github远程仓库
 在github上创建一个仓库 `xxx.github.io` xxx为自己的github用户名
 #### 安装插件

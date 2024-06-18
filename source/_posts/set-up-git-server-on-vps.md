@@ -25,7 +25,7 @@ $ sudo adduser git
 ### 第三步
 创建证书，免密码登录：
 收集所有需要登录的用户的公钥（`id_rsa.pub`）文件，把所有公钥导入到 `/home/git/.ssh/authorized_keys` 文件内，一行一个。
-如果个人的git中的公钥已经连接了其他服务器如：github，可以参考 {% post_link tools/computer-mutiple-github-account %}
+如果个人的git中的公钥已经连接了其他服务器如：github，可以参考 {% post_link computer-mutiple-github-account %}
 >**注意：一定要通过下面的命令将该文件其他用户的所有权限移除，否则会出现文章尾部问题**
 
 ```bash
