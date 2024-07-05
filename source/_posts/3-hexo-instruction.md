@@ -239,6 +239,7 @@ tags:
 `categories`:文集，为左侧列表
 `tags`:标签，通过#来筛选
 例如 本篇文章的设置
+
 ```yaml
 ---
 title: 3-hexo使用说明
@@ -250,6 +251,7 @@ tags:
 - 3-hexo
 ---
 ```
+
 ### 5.2 写作
 1.设置模板，blog根目录 `scaffolds/post.md`
 加入categories,tags等，这样以后通过 `hexo new` 生成的模板就不用写这两个单词了。
