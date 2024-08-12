@@ -33,7 +33,6 @@ skip_render:
 - 'daka/**'
 - 'layui-select-multiple/**'
 - 'layui-table-merge/**'
-- 'layui-soul-table/**'
 - 'metelle/**'
 
 # Writing
