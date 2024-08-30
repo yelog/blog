@@ -7,6 +7,9 @@ tags:
 - shell
 - linux
 ---
+
+# 语法
+
 ## 1. 变量
 ```bash
 #!/bin/bash
@@ -248,6 +251,15 @@ then
 else
    echo "没有符合的条件"
 fi
+
+# 判断数组为空时
+list=()
+if [ ${#list[@]} == 0 ]
+then
+  echo "数组为空"
+else
+  echo "数组不为空"
+fi
 ```
 ### ② for
 ```bash
@@ -395,3 +407,17 @@ echo $name
 
 ## reference:
 [1] http://www.runoob.com/linux/linux-shell.html
+
+
+# 场景
+
+## 统计代码行数
+```bash
+find . -type f | grep -v '.git\|.idea\|target' | xargs cat | wc -l
+```
+
+## 查询 /data/docker/system/containers 下的 log 大小总和
+```bash
+find . -name "*-json.log" | xargs ls -l | awk '{print $5}' | awk '{sum+=$1}END{print sum}'
+```
+
