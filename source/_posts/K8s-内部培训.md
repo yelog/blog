@@ -2,6 +2,7 @@
 title: K8s-内部培训
 enlink: k8s-inner-training
 date: 2024-02-05 09:17:27
+hide: false
 categories:
 - 运维
 tags:
