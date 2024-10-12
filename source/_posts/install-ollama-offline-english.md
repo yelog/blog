@@ -1,6 +1,6 @@
 ---
-title: 离线安装 Ollama及加载离线模型
-enlink: install-ollama-offline
+title: Installing Ollama offline and loading offline models
+enlink: install-ollama-offline-english
 date: 2024-10-10 16:31:27
 categories:
 - 工具
@@ -11,41 +11,41 @@ tags:
 - Installation Guide
 ---
 
-# 前言
+# Preface
 
-本地已经玩了 `ollama` 很长时间了, 今天打算把 `ollama` 安装到服务器上, 但是服务器没有外网, 所以只能离线安装了, 找了一下离线装教程还是比较少了, 所以自己写一篇, 以便以后查阅.
+I've been playing `ollama` locally for a long time, today I'm going to install `ollama` on the server, but the server doesn't have an extranet, so I can only install it offline, I've looked for offline tutorials but there are fewer of them, so I'm going to write my own, so that I can check it out in the future.
 
-# 离线安装 Ollama
+## Install Ollama Offline
 
-## 下载安装包
+### Download the Installer
 
-在官方 [Release](https://github.com/ollama/ollama/releases) 中进行下载, 根据服务器的 cpu 类型下载对应的安装包, 下载完成后上传到服务器上.
+Download the appropriate installation package from the official [Release](https://github.com/ollama/ollama/releases) page, based on the server's CPU type. After downloading, upload the package to the server.
 
-![Ollama Relase](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410101649580.png)
+![Ollama Release](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410101649580.png)
 
-## 安装
+### Installation
 
-解压安装包 `ollama linux amd64.tgz`, 进入到解压后的目录, 执行 `install.sh` 脚本进行安装.
+Extract the installation package `ollama linux amd64.tgz`, navigate to the extracted directory, and run the `install.sh` script to complete the installation.
 
 ```bash
-# 解压安装包
+# Extract the installation package
 tar -zxvf Ollama\ Linux\ AMD64.tgz
-# 将 ollama 执行命令移动到 /usr/bin 目录下
+# Move the ollama executable to the /usr/bin directory
 sudo mv bin/ollama /usr/bin/ollama
 ```
 
-## 启动并添加开机启动
+## Start and Enable Auto-Start
 
-1.创建执行用户, 这一步可以忽略, 可以直接设置 `root` 或其他有 `ollama` 执行权限的用户都可以
+1. Create an execution user. This step can be skipped; you can directly set `root` or any other user with `ollama` execution permissions.
 
 ```bash
 sudo useradd -r -s /bin/false -U -m -d /usr/share/ollama ollama
 sudo usermod -a -G ollama $(whoami)
 ```
 
-2.创建配置文件
+2. Create a configuration file
 
-创建文件 `/etc/systemd/system/ollama.service`, 并填充如下内容, 其中的 `User` 和 `Group` 根据上一步的选择填写
+Create the file `/etc/systemd/system/ollama.service` and populate it with the following content, filling in the `User` and `Group` fields based on your choice in the previous step.
 
 ```bash
 [Unit]
@@ -64,45 +64,44 @@ Environment="PATH=$PATH"
 WantedBy=default.target
 ```
 
-然后执行如下命令
+Then execute the following commands
 
 ```bash
-# 加载配置
+# Load the configuration
 sudo systemctl daemon-reload
-# 设置开机启动
+# Enable auto-start on boot
 sudo systemctl enable ollama
-# 启动 ollama 服务
+# Start the ollama service
 sudo systemctl start ollama
 ```
 
+# Offline Model Installation
 
-# 离线安装模型
-
-如下使用 `gguf` 模型安装方式, 模型安装的方式都差不多, 可以参考如下方式
+Here, we will use the `gguf` model installation method. The installation methods for models are quite similar, and you can refer to the following steps.
 
 ## Qwen2.5-3b
 
-1.下载模型, 可以到 [huggingface](https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat-GGUF/tree/main) 上搜索对应模型的 gguf 版本, 如搜索 *qwen2.5-3b-gguf*
+1.Download the model. You can search for the corresponding gguf version of the model on [huggingface](https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat-GGUF/tree/main), such as searching for *qwen2.5-3b-gguf*.
 
 ![search huggingface model](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410120953995.png)
 
-具体选那个微调版本都可以, 我们这里参考 `ollama` 上选择的模型版本, 如下图
+You can choose any fine-tuned version; here, we refer to the model version selected on `ollama`, as shown in the figure below.
 
 ![ollama qwen2.5-3b model](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121437723.png)
 
-我们直接在刚才找到的模型中, 点击 `Files and versions`, 找到在 ollama 中找到的版本, 点击下载
+In the model we just found, click on `Files and versions`, locate the version found in ollama, and click download.
 
 ![download qwen2.5-3b](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121440090.png)
 
-2.将下载后的文件上传到服务器的目录 `/data/ollama`, 并重命名为 qwen2.5-3b.gguf, (重命名为了方便后面引用)
-3.在 `/data/ollama` 目录下创建文件 `Modelfile`, 添加如下内容
+2.Upload the downloaded file to the server directory `/data/ollama` and rename it to `qwen2.5-3b.gguf` (renaming for easier reference later).
+3.Create a file named `Modelfile` in the `/data/ollama` directory and add the following content.
 
 ```dockerfile
-# 上一步的模型名
+# Model name from the previous step
 FROM ./qwen2.5-3b.gguf
 
-# 可以到 ollama 网站上的模型库去寻找, 如 qwen2.5-3b 的模板地址: https://ollama.com/library/qwen2.5:3b/blobs/eb4402837c78
-# 直接复制 ollama 上的 Template 到如下三个双引号中间
+# You can find the template for the model on the ollama website, such as the template address for qwen2.5-3b: https://ollama.com/library/qwen2.5:3b/blobs/eb4402837c78
+# Directly copy the Template from ollama into the three double quotes below
 TEMPLATE """{{- if .Messages }}
 {{- if or .System .Tools }}<|im_start|>system
 {{- if .System }}
@@ -155,55 +154,56 @@ For each function call, return a json object with function name and arguments wi
 {{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}
 """
 
-# 这一步参考 ollama 上的 parameters, 但是 ollama 上的 qwen2.5-3b 是没有参数的, 按照下面的格式添加即可
+# This step refers to the parameters on ollama; however, there are no parameters for qwen2.5-3b on ollama. You can add them in the following format.
 PARAMETER stop "<|im_start|>"
 PARAMETER stop "<|im_end|>"
 ```
 
-4.执行如下命令, 加载并运行离线模型
+4.Execute the following commands to load and run the offline model.
 
 ```bash
-# 通过模型描述文件, 创建并运行 qwen2.5 模型
+# Create and run the qwen2.5 model using the model description file
 ollama create qwen2.5 -f Modelfile
-# 查看模型运行列表, 是否正在运行
+# Check the list of running models to see if it is active
 ollama ls
 
-# 通过 api 调用模型, 检测模型是否运行正常
+# Use the API to call the model and check if it is running properly
 curl --location --request POST 'http://127.0.0.1:11434/api/generate' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "qwen2.5",
     "stream": false,
-    "prompt": "你好, 24节气的第一个节气是什么?"
+    "prompt": "Hello, what is the first solar term of the 24 solar terms?"
 }' \
 -w "Time Total: %{time_total}s\n"
 ```
-如下图, 正常返回回答内容, 表示模型成功安装
+As shown in the figure below, a normal response indicates that the model has been successfully installed.
 ![api/generate](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121030889.png)
 
 ## Llama3.2-3b
 
-1.下载模型, 可以到 [huggingface](https://huggingface.co/QuantFactory/Llama-3.2-3B-GGUF) 上搜索对应模型的 gguf 版本, 如搜索 `llama3.2-3b-gguf`
+1.Download the model. You can search for the corresponding gguf version of the model on [huggingface](https://huggingface.co/QuantFactory/Llama-3.2-3B-GGUF), such as searching for `llama3.2-3b-gguf`.
 
 ![search huggingface model](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121034782.png)
 
-具体选那个微调版本都可以, 我们这里参考 ollama 上选择的模型版本, 如下图
+You can choose any fine-tuned version; here we refer to the model version selected on ollama, as shown in the figure below.
 
 ![ollama llama3.2-3b model](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121445150.png)
 
-我们直接在刚才找到的模型中, 点击 `Files and versions`, 找到在 ollama 中找到的版本, 点击下载
+We directly click on `Files and versions` in the model we just found, find the version available on ollama, and click to download.
 
 ![download llama3.2-3b](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121448569.png)
 
-2.将下载后的文件上传到服务器的目录 `/data/ollama`, 并重命名为 `llama3.2-3b.gguf`, (重命名为了方便后面引用)
-3.在 `/data/ollama` 目录下创建文件 `Modelfile`, 添加如下内容
+2.Upload the downloaded file to the server directory `/data/ollama`, and rename it to `llama3.2-3b.gguf` (renamed for easier reference later).
+
+3.Create a file named `Modelfile` in the `/data/ollama` directory and add the following content.
 
 ```dockerfile
-# 上一步的模型名
+# Model name from the previous step
 FROM ./llama3.2-3b.gguf
 
-# 可以到 ollama 网站上的模型库去寻找, 如 llama3.2-3b 的模板地址: https://ollama.com/library/llama3.2/blobs/966de95ca8a6
-# 直接复制 ollama 上的 Template 到如下三个双引号中间
+# You can find templates in the model repository on the ollama website, for example, the template address for llama3.2-3b: https://ollama.com/library/llama3.2/blobs/966de95ca8a6
+# Directly copy the Template from ollama into the three double quotes below
 TEMPLATE """<|start_header_id|>system<|end_header_id|>
 
 Cutting Knowledge Date: December 2023
@@ -250,37 +250,37 @@ Respond in the format {"name": function name, "parameters": dictionary of argume
 {{- end }}
 """
 
-# 这一步参考 ollama 上的 parameters, llama3.2-3b 的 params: https://ollama.com/library/llama3.2/blobs/56bb8bd477a5
+# This step references the parameters from ollama. For llama3.2-3b, the params can be found at: https://ollama.com/library/llama3.2/blobs/56bb8bd477a5
 PARAMETER stop "<|start_header_id|>"
 PARAMETER stop "<|end_header_id|>"
 PARAMETER stop "<|eot_id|>"
 ```
 
-4.执行如下命令, 加载并运行离线模型
+4.Execute the following commands to load and run the offline model.
 
 ```bash
-# 通过模型描述文件, 创建并运行 qwen2.5 模型
+# Create and run the llama3.2 model using the model description file
 ollama create llama3.2 -f Modelfile
-# 查看模型运行列表, 是否正在运行
+
+# Check the list of running models to see if it is active
 ollama ls
 
-# 通过 api 调用模型, 检测模型是否运行正常
+# Call the model through the API to check if it is functioning properly
 curl --location --request POST 'http://127.0.0.1:11434/api/generate' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "llama3.2",
     "stream": false,
-    "prompt": "你好, 24节气的第一个节气是什么?"
+    "prompt": "Hello, what is the first solar term of the 24 solar terms?"
 }' \
--w "Time Total: %{time_total}s\n"
+-w "Time Total: %{time_total}s"
 ```
-如下图, 正常返回回答内容, 表示模型成功安装
+As shown in the image below, the model returns the response correctly, indicating that it has been successfully installed.
 ![api/generate](https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121041193.png)
 
-# 最后
+# Conclusion
 
-`Ollama` 是非常好用的模型安装工具, 希望大家玩的开心! 如果安装有问题或者有什么使用技巧都可以在评论区交流~~~
-
+`Ollama` is a very useful tool for installing models. I hope everyone enjoys using it! If you encounter any installation issues or have tips to share, feel free to discuss them in the comments~~~
 
 
 
