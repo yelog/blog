@@ -7,11 +7,13 @@ categories:
 tags:
 - js
 ---
+
 ## 直接上解决方法
+
 不论页面是否被缓存，都会触发 `pageshow`，所以后退后需要执行的方法可以都放在下面事件内：
 ```javascript
 window.addEventListener('pageshow', function () {
   console.log('on pageshow')
 })
-```
-`浏览器缓存行为` 的详细介绍可以参考： {% post_link bf-cache %}
+
+`浏览器缓存行为` 的详细介绍可以参考： {% post_link browser-back-forward-cache %}
