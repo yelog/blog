@@ -72,11 +72,11 @@ function sendXHR () {
 }
 ```
 超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：
-![](http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png)
+![](https://cdn.jsdelivr.net/gh/yelog/assets/images/FiUT28A3DCpwPiyvJpsvhkdFQai1.png)
 
 为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。
 ```javascript
 setTimeout(sendXHR, 1000)
 ```
 这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。
-![](http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png)
+![](https://cdn.jsdelivr.net/gh/yelog/assets/images/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png)

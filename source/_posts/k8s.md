@@ -431,6 +431,18 @@ sudo find /data/docker/system/containers/ -name "*-json.log" | xargs sudo rm -rf
 ### 导入 lemes-web 出现问题
 Error from server (InternalError): error when creating "management-state/tmp/yaml-397511040": Internal error occurred: failed calling webhook "validate.nginx.ingress.kubernetes.io": Post "https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1/ingresses?timeout=10s": x509: certificate is not valid for any names, but wanted to match ingress-nginx-controller-admission.ingress-nginx.svc
 
+2024-10-28 导入 moss-web 时, 再次遇到:
+Internal error occurred: failed calling webhook \"validate.nginx.ingress.kubernetes.io\": Post \"https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1beta1/ingresses?timeout=10s\": x509: certificate is valid for localhost, rancher.cattle-system, not ingress-nginx-controller-admission.ingress-nginx.svc
+
+解决方案: https://github.com/kubernetes/ingress-nginx/issues/5968#issuecomment-782092413
+```bash
+# Find name of the ingress-nginx-admission resource
+kubectl get -A ValidatingWebhookConfiguration
+# Delete it
+kubectl delete -A ValidatingWebhookConfiguration <name>
+# Example:
+kubectl delete -A ValidatingWebhookConfiguration foobar-ingress-nginx-admission
+```
 
 ### node 节点报错 PLEG is not healthy: pleg was last seen active 7m20.510472824s ago; threshold is 3m0s
 

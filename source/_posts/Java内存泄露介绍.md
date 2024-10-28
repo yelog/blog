@@ -16,7 +16,7 @@ tags:
 
 为了理解这个定义，我们需要理解对象在内存中的状态；下面的图表说明什么是未被使用和未被引用。
 
-![](http://img.saodiyang.com/FgwzTgT7v_YeTJ0Y_pWnoJXyfeHg.jpeg)
+![](https://cdn.jsdelivr.net/gh/yelog/assets/images/FgwzTgT7v_YeTJ0Y_pWnoJXyfeHg.jpeg)
 
 图表中，有被引用的对象和未被引用的对象；未被引用的对象将会被当做垃圾回收，而被引用的对象将不会被当做垃圾回收；未被引用的对象由于没有被其他对象引用，它当然也是不被使用的对象，然而，不被使用的对象不全是不被引用的，它们中的一些是被引用的！这就是内存泄露的来源。
 
@@ -24,7 +24,7 @@ tags:
 让我们来看一下下面这个例子，它说明了内存泄露为什么会发生。在下面这个列子中，对象A引用了对象B，A的生命周期（t1~t4）是比B（t2~t3）的长；当B不再被应用程序使用时，A仍然在引用它；在这种情况下，垃圾收集器不能从内存中移除B；如果A引用了很多类似B这样的对象，它们不能被回收，又消耗着内存空间的资源，这样很有可能造成内存不足的问题。
 
 还有一种可能的事情，B又引用了一些对象，这些被B引用的对象也不能被回收，那所有这些不被使用的对象将消耗大量宝贵的内存空间。
-![](http://img.saodiyang.com/Fm3d2a94sdbY4mb5ua-_BjAusKbq.jpeg)
+![](https://cdn.jsdelivr.net/gh/yelog/assets/images/Fm3d2a94sdbY4mb5ua-_BjAusKbq.jpeg)
 
 ## 如何防止内存泄露
 下面有一些防止内存泄露的快速实践技巧

@@ -37,9 +37,9 @@ link:
 ```
 ### 5.效果
 **链接图标：**
-![图标](http://img.saodiyang.com/FlmC3WWi9jzgVRdSKJ2_li5UHVsr.png)
+![图标](https://cdn.jsdelivr.net/gh/yelog/assets/images/FlmC3WWi9jzgVRdSKJ2_li5UHVsr.png)
 **链接地址效果**
-![效果](http://img.saodiyang.com/FuTy1C-xSgdTTOZch_UH1355NAs9.png)
+![效果](https://cdn.jsdelivr.net/gh/yelog/assets/images/FuTy1C-xSgdTTOZch_UH1355NAs9.png)
 
 ## 添加Sitemap
 Sitemap，网站地图，是网站优化中重要的一环，无论是对于访问者还是对于搜索引擎。
@@ -58,4 +58,4 @@ plugin:
 
 ### 4.效果
 访问 /sitemap.xml 就能看到生成的站点地图了
-![站点地图效果](http://img.saodiyang.com/FtFLZ2CSfYa_IKLS-a9ymvKvaztp.png)
+![站点地图效果](https://cdn.jsdelivr.net/gh/yelog/assets/images/FtFLZ2CSfYa_IKLS-a9ymvKvaztp.png)

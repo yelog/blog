@@ -30,4 +30,4 @@ date: 2016-09-27 11:31:01
  ### 效果
  > [http://yelog.org/举个404例子](http://yelog.org/举个404例子)
 
- ![404](http://img.saodiyang.com/FjSPGVPAu_7d0aMPqErpI1HN_985.png)
+ ![404](https://cdn.jsdelivr.net/gh/yelog/assets/images/FjSPGVPAu_7d0aMPqErpI1HN_985.png)

@@ -31,8 +31,8 @@ git clone https://github.com/DeemOpen/zkui.git
 4. 执行 `nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &`
 5. 测试 `http://localhost:9090`，如果能看到如下页面，表示安装成功。
 
-![登录页面](http://img.saodiyang.com/Fherw3peRgh-grmGz6qkNri5J1aG.png)
-![首页](http://img.saodiyang.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png)
+![登录页面](https://cdn.jsdelivr.net/gh/yelog/assets/images/Fherw3peRgh-grmGz6qkNri5J1aG.png)
+![首页](https://cdn.jsdelivr.net/gh/yelog/assets/images/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png)
 
 ## 三.使用dubbo
 1. 在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖
