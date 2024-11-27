@@ -16,23 +16,39 @@ tags:
 
 ## 横评
 
-| capability | Kitty | Alacritty | WezTerm | iTerm2 | Native |
-| ----       | ----  | ----      | ----    | ----   |        |
-| key-bind   |       |           |         |        |        |
+| capability   | Kitty | Alacritty | WezTerm | iTerm2 | Native |
+| ----         | ----  | ----      | ----    | ----   |        |
+| key-bind     | ✅    | ✅        | ✅      | ✅     | ❌     |
+| vim-mode     | ❌    | ✅        | ✅      | ❌     | ❌     |
+| Cursor Trail | ✅    | ❌        | ❌      | ❌     | ❌     |
+| show-image   | ✅    | ❌        | ❌      | ❌     | ❌     |
 
 
 ## log
 
+### 2024-11-17
+
+> `Kitty` -> `WezTerm`
+
+- 发现 `WezTerm` 的 `cmd+k` 不能用是因为写了一个测试出的绑定键导致的
+- `Kitty` 快捷键经常失效
+
+### 2024-10-31
+> `WezTerm` -> `Kitty`
+
+- `Kitty` support [Add Cursor Trail Feature to Enhance Cursor Visibility](https://github.com/kovidgoyal/kitty/pull/7970)
+- support `command-k` 用于绑定 `avante.nvim`
+
 ### 2024-06-27
 
-> 放弃 `Kitty` -> 转为 `WezTerm`
+> `Kitty` -> `WezTerm`
 
 `Kitty` 绑定 `cmd-shift-f` 在 tmux 下无法使用， 且没有 `vim-mode`
 
 
 ### 2024-06-26
 
-> 放弃使用 `Alacritty` -> 转为 `Kitty`
+> `Alacritty` -> `Kitty`
 
 因为在 `vim` 的 `normal` 模式下, 如果是中文输入法, 输入的内容会出现在输入法的候选框内, 然后按 `<CAPS>` 按键切换输入法, 候选框中的输入的字母, 会以 insert 的方式输出到光标所在的位置, 这个问题在 `WezTerm` 和 `Kitty` 中没有出现.
 
@@ -40,5 +56,5 @@ tags:
 
 ### 2024-06-20
 
-> 放弃 `WezTerm` -> 转为 `Alacritty`
+> `WezTerm` -> `Alacritty`
 

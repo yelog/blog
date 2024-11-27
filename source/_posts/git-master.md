@@ -122,5 +122,15 @@ $ find . -name "*.iml" | xargs rm -f
 /**/*.iml
 ```
 
+### 统计某段时间内每个人的提交量
+
+```bash
+# 查询分支: pgsql-master
+# 查询日期: 2023-11-30 ~ 2024-11-04
+# 排除 Merge 的 commit: --no-merges
+# 按 commit 数量进行排序
+git log pgsql-master --since="2023-11-30" --until="2024-11-04" --no-merges --pretty="%an" | sort | uniq -c | sort -nr
+```
+
 ---
 持续更新中～～～

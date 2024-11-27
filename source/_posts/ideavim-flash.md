@@ -3,7 +3,8 @@ title: 最强跳转插件 flash.nvim 在 ideavim 上使用是中什么体验
 enlink: ideavim-flash
 date: 2024-09-05 22:47:36
 categories:
-- VIM
+- 工具
+- vim
 tags:
 - vim
 - neovim
