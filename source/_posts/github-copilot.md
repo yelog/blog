@@ -52,7 +52,7 @@ tags:
 
 我们可以直接在 `Chat` 聊天框中, 输入需要修改的问题, `Copilot` 会根据你的描述, 生成代码, 如果不满意, 可以继续聊天, 返回满意的代码后, 点击 `Accept` 就可以将代码应用到编辑器中.
 
-> Todo
+![Github Chat](https://cdn.jsdelivr.net/gh/yelog/assets/images/202412021204553.png)
 
 # 4 最后
 
