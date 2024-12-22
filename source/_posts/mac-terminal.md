@@ -17,7 +17,7 @@ tags:
 ## 横评
 
 | capability   | Kitty | Alacritty | WezTerm | iTerm2 | Native |
-| ----         | ----  | ----      | ----    | ----   |        |
+| ----         | ----  | ----      | ----    | ----   | ----   |
 | key-bind     | ✅    | ✅        | ✅      | ✅     | ❌     |
 | vim-mode     | ❌    | ✅        | ✅      | ❌     | ❌     |
 | Cursor Trail | ✅    | ❌        | ❌      | ❌     | ❌     |
