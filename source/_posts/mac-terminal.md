@@ -23,7 +23,6 @@ tags:
 | Cursor Trail | ✅    | ❌        | ❌      | ❌     | ❌     |
 | show-image   | ✅    | ❌        | ❌      | ❌     | ❌     |
 
-
 ## log
 
 ### 2024-11-17
