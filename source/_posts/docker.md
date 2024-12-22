@@ -10,21 +10,49 @@ tags:
 ---
 
 
-## Commands
+# Commands
 ```bash
+# 根据镜像启动容器
+# -d 后台运行 -p 端口映射 -v 挂载目录 -e 环境变量 --name 容器名 --restart 重启策略
+docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+# 查看正在运行的容器列表, -a 包含已经停止的容器
+docker ps [-a]
+# 查看指定容器的日志, --tail 50 最后50调， -f 持续查看
+docker logs --tail 50 -f <container-id> 
+# 命令行进行指定容器
+docker exec -it <container-id> /bin/sh
+# 启动容器
+docker start <container-id>
+# 停止容器
+docker stop <container-id>
+# 重启容器
+docker restart <container-id>
+# 删除容器
+docker rm <container-id>
+# 拉取镜像
+docker pull nginx
+# 查看本地仓库有哪些镜像
+docker images
 # 查询 docker 的磁盘使用情况
 docker system df
 # 每个容器的磁盘占用情况
 docker system df -v
 # 从容器中拷贝到宿主机
 docker cp <container-id>:<path> .
-
+# 将 nginx 镜像保存到 nginx.tar 文件
+docker save -o nginx.tar nginx
+# 还原镜像
+docker load -i nginx.tar
+# 清除所有不在使用的资源
+docker system prune -af
+# 查看镜像的构建历史
+docker history nginx
+# 查看镜像的详细信息
+docker inspect nginx
 ```
-## 常用操作
+# 常用操作
 
-### 安装卸载
-
-#### docker install
+## docker install
 
 ```bash
 # 安装依赖
@@ -39,14 +67,14 @@ sudo yum install -y docker-ce-20.10.9
 sudo systemctl enable --now docker
 ```
 
-#### docker uninstall
+## docker uninstall
 
 ```bash
 # 卸载
 sudo yum remove -y docker docker-ce docker-common docker-selinux docker-engine
 ```
 
-#### docker 设置私服和存储地址
+## docker 设置私服和存储地址
 ```bash
 sudo vi /etc/docker/daemon.json
 ```
@@ -78,6 +106,7 @@ sudo kill -SIGHUP $(pidof dockerd)
 ```
 
 > 其他方法
+
 ```bash
 # 创建一个挂在镜像和容器的地方，最好选存储空间大的位置
 mkdir -p /data/docker/system
@@ -91,7 +120,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-#### 授权当前用户 docker 的执行权限
+## 授权当前用户 docker 的执行权限
 ```bash
 # 将当前用户添加到 docker 组内
 sudo gpasswd -a $USER docker
@@ -101,7 +130,7 @@ newgrp docker
 sudo systemctl restart docker
 ```
 
-### docker-compose
+## docker-compose
 
 1.自带插件
 
@@ -120,7 +149,7 @@ sudo chmod 777 /usr/bin/docker-compose
 
 
 
-### 查看容器文件（原始启动失败的情况下）
+## 查看容器文件（原始启动失败的情况下）
 ```bash
 docker run -it 10.176.2.207:5000/lemes-cloud/lemes-gateway:pgsql-master-202306181324 /bin/bash
 ```
@@ -128,7 +157,7 @@ docker run -it 10.176.2.207:5000/lemes-cloud/lemes-gateway:pgsql-master-20230618
 docker create -it --name dumy 10.188.132.123:5000/lemes-cloud/lemes-gateway:develop-202312111536 bash
 docker cp dumy:/data .
 
-### 从镜像想宿主机复制文件
+## 从镜像想宿主机复制文件
 ```bash
 # 创建容器, 不启动
 docker create -it --name dumy 10.188.132.123:5000/library/mysql2postgresql-jdbc-agent:1.0.0 bash
@@ -138,7 +167,7 @@ docker cp dumy:/tmp/mysql2postgresql-jdbc-agent-1.0.0.jar .
 docker rm dumy
 ```
 
-### 打包镜像并还原镜像
+## 打包镜像并还原镜像
 ```bash
 # 打包镜像
 docker save -o lemes-web.tar 10.176.2.207:5000/lemes-cloud/lemes-web:pgsql-master-202306272212
@@ -146,7 +175,7 @@ docker save -o lemes-web.tar 10.176.2.207:5000/lemes-cloud/lemes-web:pgsql-maste
 docker load -i lemes-web.tar
 ```
 
-### 修改启动容器的端口映射 modify port mapping of running container
+## 修改启动容器的端口映射 modify port mapping of running container
 
 假设我们有已经启动的容器 `my-nginx`, 目前的端口映射为 `80:80`, 现在需要修改为 `8080:80`
 
@@ -160,13 +189,15 @@ docker load -i lemes-web.tar
 > 那么除了修改 `config.v2.json` 中的 `PortBindings` 的 `key` 从 `80/tcp` 到 `8080/tcp` 外
 > 还需要修改 `config.v2.json` 中的 `ExposedPorts` 中的 `80/tcp` 为 `8080/tcp`
 
-## problem
-### getting the final child's pid from pipe caused: EOF: unknown
+# Issues
+
+## getting the final child's pid from pipe caused: EOF: unknown
+
 ```bash
 sudo sysctl -w user.max_user_namespaces=150000
 ```
 
-### failed to start daemon: Devices cgroup isn't mounted
+## failed to start daemon: Devices cgroup isn't mounted
 
 start docker deamon faild.
 ```bash
@@ -334,7 +365,7 @@ fi
 exit 0
 ```
 
-### systemctl start docker 卡住
+## systemctl start docker 卡住
 
 通过 `systemctl status docker` 查看状态, 发现并没有关闭成功
 
@@ -351,7 +382,7 @@ done
 
 然后再次启动 `docker` 即可
 
-## Link
+# Link
 
 1. [docker centos rpm](https://download.docker.com/linux/centos/7/x86_64/stable/Packages/)
 

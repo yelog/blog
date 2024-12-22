@@ -1,6 +1,6 @@
 ---
-title: Github Copilot 使用技巧(完结)
-enlink: github-copilot-skill
+title: NeoVim Avante 使用指南
+enlink: neovim-avante-skill
 date: 2024-11-06 12:44:51
 categories:
 - AI

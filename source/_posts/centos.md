@@ -10,8 +10,10 @@ tags:
 - yum
 ---
 
-## Software installation
-### yum
+# Software installation
+
+## yum
+
 ```bash
 # 就是把服务器的包信息下载到本地电脑缓存起来，makecache建立一个缓存，以后用install时就在缓存中搜索，提高了速度。
 yum makecache
@@ -52,7 +54,9 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos
 ## 生成缓存
 yum makecache
 ```
-### ansible
+
+## ansible
+
 ```bash
 # 修改要管理的机器
 vim /etc/ansible/hosts
@@ -61,7 +65,8 @@ vim /etc/ansible/hosts
 192.168.1.101
 ```
 
-### man
+## man
+
 ```bash
 # 在 .bashrc 中放入，可以高亮man手册
 function man()
@@ -78,7 +83,8 @@ function man()
 }
 ```
 
-### zsh/on-my-zsh
+## zsh/on-my-zsh
+
 ```bash
 # 安装 zsh git
 yum install -y zsh git
@@ -100,13 +106,15 @@ make && make install
 vim /etc/shells # 添加：/usr/local/bin/zsh
 ```
 
-### git
+## git
+
 ```bash
 sudo yum install -y https://packages.endpointdev.com/rhel/7/os/x86_64/endpoint-repo.x86_64.rpm
 sudo yum install -y git
 ```
 
-### neovim
+## neovim
+
 ```bash
 # Download source code
 git clone https://github.com/neovim/neovim.git
@@ -120,13 +128,15 @@ sudo make install
 pip3 install --upgrade --force-reinstall neovim
 ```
 
-### neofetch
+## neofetch
+
 ```bash
 dnf copr enable -y konimex/neofetch
 dnf install -y neofetch
 ```
 
-### rainbarf
+## rainbarf
+
 ```bash
 # Download source code
 git clone https://github.com/creaktive/rainbarf.git
@@ -138,7 +148,8 @@ perl Build.PL
 ./Build install
 ```
 
-### node
+## node
+
 Mange node using [nvm](https://github.com/nvm-sh/nvm)
 ```bash
 # installation
@@ -150,15 +161,16 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install node
 ```
 
-### docker
+## docker
 
 [[docker#安装卸载]]
 
-### docker-compose
+## docker-compose
 
 [[docker#docker-compose]]
 
-### rancher
+## rancher
+
 ```bash
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
@@ -201,7 +213,7 @@ docker run -d --restart=unless-stopped \
   10.176.2.207:5000/rancher/rancher:v2.5.12
 ```
 
-### Harbor
+## Harbor
 
 > 前提: 需要先安装 docker & docker-compose
 
@@ -487,7 +499,7 @@ cache:
 ```
 
 
-### nexus
+## nexus
 
 ```bash
 # create dir of nexus
@@ -495,7 +507,7 @@ sudo mkdir /data/nexus-data && sudo chown -R 200 /data/nexus-data
 docker run -d -p 8081:8081 --name nexus -v /data/nexus-data:/nexus-data 10.188.132.123:5000/library/sonatype/nexus3:3.63.0
 ```
 
-### jenkins
+## jenkins
 
 修改启动用户，默认 anonymous 在 jenkins 脚本中没有权限创建文件
 
@@ -506,7 +518,9 @@ JENKINS_USER="lemes"
 # 重启 jenkins
 service jenkins restart
 ```
-### jenkins-docker
+
+## jenkins-docker
+
 ```bash
 docker run -d --name jenkins -p 9080:8080 10.188.132.44:5000/library/jenkins/jenkins:2.426.2-lts-jdk17
 sudo mkdir -p /data/jenkins_home
@@ -553,14 +567,16 @@ docker run \
 
 
 
-### nginx
+## nginx
+
 ```bash
 sudo yum install -y epel-release
 sudo yum -y install nginx # 安装 nginx
 sudo yum remove nginx  # 卸载 nginx
 ```
 
-### python
+## python
+
 Download latest installation package from [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/)
 ```bash
 # 安装依赖&编译工具
@@ -590,7 +606,8 @@ python3 -V
 pip3 -V
 ```
 
-### gcc8
+## gcc8
+
 ```bash
 sudo yum install centos-release-scl devtoolset-8-gcc* -y
 # 激活生效（临时）
@@ -598,7 +615,8 @@ scl enable devtoolset-8 bash
 gcc -v
 ```
 
-### jdk
+## jdk
+
 ```bash
 # 创建 jdk 存放目录
 mkdir -p /data/software/jdk
@@ -622,7 +640,8 @@ sudo yum install -y java-11-amazon-corretto-devel
 ```
 
 
-### maven
+## maven
+
 ```bash
 # 下载 maven 包 https://dlcdn.apache.org/
 mkdir -p /data/software/maven
@@ -639,7 +658,8 @@ source /etc/profile
 ```
 
 
-### redis
+## redis
+
 ```bash
 # https://redis.io/download/
 cd /usr/local/
@@ -648,15 +668,18 @@ tar -zxvf redis-7.0.5.tar.gz
 cd redis-7.0.5/
 ```
 
-### ntp
+## ntp
+
 ```bash
 yum install ntp ntpdate
 systemctl start ntpd
 systemctl enable ntpd
 ```
 
-## System setting
-### ssh no password
+# System setting
+
+## ssh no password
+
 ```bash
 # 客户端
 ## 生成公私钥对
@@ -676,7 +699,8 @@ chmod 700 -R ~/.ssh
 echo "公钥" >> ~/.ssh/authorized_keys
 ```
 
-### open file limit
+## open file limit
+
 ```bash
 # 获取当前系统设置的文件数
 ulimit -n
@@ -707,7 +731,8 @@ fs.inotify.max_user_watches = 1000000
 sudo sysctl -p
 ```
 
-### firewalld
+## firewalld
+
 ```bash
 # 启动 firewalld
 sudo systemctl start firewalld
@@ -728,7 +753,7 @@ sudo firewall-cmd --zone=public --add-port=9332/tcp --permanent
 
 ```
 
-### disk
+## disk
 
 ```bash
 # 挂载磁盘 /dev/sda3 到/data目录， 重启失效
@@ -740,7 +765,7 @@ mount /dev/sda3 /data
 /dev/sda3 /data ext4 defaults 0 0
 ```
 
-### Cpu&Memory
+## Cpu&Memory
 
 ```bash
 # 查询物理个数
@@ -754,15 +779,29 @@ grep 'processor' /proc/cpuinfo | sort -u | wc -l
 
 ```
 
-## command
+# command
 
-### network
+## network
+
+
+### DNS
+
+[[CentOS修改DNS-GW-IP# 1.修改DNS]]
+
+### gateway
+
+[[CentOS修改DNS-GW-IP# 2.修改网关]]
+
+### IP
+
+[[CentOS修改DNS-GW-IP# 3.修改IP]]
+
 ```bash
 # 监控 eth1 网卡的上下行网络
 watch -d ifstat eth1
 ```
 
-### files
+## files
 
 #### search and delete file
 
@@ -773,16 +812,17 @@ find . -name *.bak -type f -exec rm -rf {} \;
 find . -name '.settings' -type d -exec rm -rf {} \;
 ```
 
-### ctrl-w delete word
+## ctrl-w delete word
+
 add the following lines to my .bashrc
 ```bash
 stty werase undef
 bind '\C-w:unix-filename-rubout'
 ```
 
-### enable vim on cli
+## enable vim on cli
+
 ```bash
 set -o vi
 ```
 
-### set time

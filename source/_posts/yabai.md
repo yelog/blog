@@ -9,7 +9,9 @@ tags:
 - mac
 - window-manager
 ---
+
 ### 启动命令
+
 ```bash
 brew services restart skhd
 
