@@ -162,16 +162,16 @@ docker load < yelog_ubuntu_v1.tar
 
 ### 2.7 移除本地镜像
 
-```
+```bash
 # -f 强制删除
 docker rmi [-f] yelog/ubuntu:v1
 # 删除悬挂镜像
 docker rmi $(docker images -f "dangling=true" -q)
 # 删除所有未被容器使用的镜像
 docker image prune -a
+# 删除所有镜像为10.188.132.123:5000/library/maven:3.9.6-amazoncorretto17.0.8的容器
+docker rm $(docker ps -a | grep "3.9.6-amazoncorretto17.0.8" | awk '{print $1}')
 ```
-
-
 
 ## 三、容器
 
@@ -213,7 +213,7 @@ docker run -t -i ubuntu:14.04 /bin/bash
 | -i                                 | 以交互模式运行容器，通常与 -t 同时使用                |
 | -P                                 | 随机端口映射，容器端口内部随即映射到宿主机的端口上    |
 | -p                                 | 指定端口映射， -p 宿主机端口:容器端口                 |
-| -t                                 | 为容器重新分配一个伪输入终，通常与 -i 同时使用        |
+| -t                                 | 为容器重新分配一个伪输入终，通常与 -i 同时使用      |
 | --name="gate"                      | 为容器指定一个名称                                    |
 | --dns 8.8.8.8                      | 指定容器的 DNS 服务器，默认与宿主机一致               |
 | --dns-search example.com           | 指定容器 DNS 搜索域名，默认与宿主机一致               |
@@ -244,7 +244,7 @@ docker run -t -i ubuntu:14.04 /bin/bash
 
 ### 3.3 启动容器
 
-```
+```bash
 # 创建一个名为 test 的容器，容器任务是：打印一行 Hello word
 docker run --name='test' ubuntu:14.04 /bin/echo 'Hello world'
 # 查看所有可用容器 [-a]包括终止在内的所有容器

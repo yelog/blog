@@ -25,6 +25,12 @@ tags:
 
 ## log
 
+### 2024-12-31
+
+> `WezTerm` -> `Kitty`
+
+- 前一段时间发现通过 `Hammerspoon` 切换到 `Kitty` 后, 再切换到别的应用, 第一下按键经常失效, 是由于开启了 `Security Keyboard Entry`, 在左上角 kitty-> `Security Keyboard Entry`, https://github.com/keycastr/keycastr/issues/304#issuecomment-2318142403
+
 ### 2024-11-17
 
 > `Kitty` -> `WezTerm`
