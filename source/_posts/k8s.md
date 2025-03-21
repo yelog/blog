@@ -420,7 +420,9 @@ kubectl delete -A ValidatingWebhookConfiguration foobar-ingress-nginx-admission
 ```bash
 # 查询log日志总数
 sudo find /data/docker/system/containers/ -name "*-json.log" | xargs sudo ls -l | awk '{print $5}' | awk '{sum+=$1}END{print sum}'
-sudo find /data/docker/system/containers/ -name "*-json.log" | xargs sudo rm -rf
+# 删除
+sudo sh -c "truncate -s 0 /data/docker/system/containers/*/*-json.log"
+# sudo find /data/docker/system/containers/ -name "*-json.log" | xargs sudo rm -rf
 ```
 
 2023-08-31 smt-wh 和 smt-tjsc 都出现了这个问题 `The node was low on resource: ephemeral-storage. Container lemes-service-wh-report was using 1936Ki, which exceeds its request of 0.`

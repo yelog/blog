@@ -38,8 +38,7 @@ docker system df
 # 每个容器的磁盘占用情况
 docker system df -v
 # 从容器中拷贝到宿主机
-docker cp <container-id>:<path> .
-# 将 nginx 镜像保存到 nginx.tar 文件
+docker cp <container-id>:<path> . # 将 nginx 镜像保存到 nginx.tar 文件
 docker save -o nginx.tar nginx
 # 还原镜像
 docker load -i nginx.tar
