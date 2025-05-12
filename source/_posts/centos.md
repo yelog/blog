@@ -172,11 +172,18 @@ nvm install node
 ## rancher
 
 ```bash
+sudo docker run -d --restart=unless-stopped \
+  -p 80:80 -p 443:443 \
+  --privileged \
+  --name=rancher-2.5 \
+  10.188.132.123:5000/rancher/rancher:v2.5.12
+
+
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   --privileged \
-  --name=lemes-rancher-2.5 \
-  10.188.132.44:5000/rancher/rancher:v2.5.12
+  --name=rancher \
+  rancher/rancher:v2.5.17
 
 docker restart lemes-rancher-2.5
 docker stop lemes-rancher-2.5
@@ -575,6 +582,14 @@ sudo yum -y install nginx # 安装 nginx
 sudo yum remove nginx  # 卸载 nginx
 ```
 
+## keepalived
+
+```bash
+# 安装 keepalived
+sudo yum install -y keepalived
+```
+
+
 ## python
 
 Download latest installation package from [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/)
@@ -674,6 +689,15 @@ cd redis-7.0.5/
 yum install ntp ntpdate
 systemctl start ntpd
 systemctl enable ntpd
+```
+
+## iptables
+
+```bash
+sudo yum install -y iptables-services
+
+sudo systemctl start iptables
+
 ```
 
 # System setting

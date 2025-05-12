@@ -29,6 +29,12 @@ docker run -d --restart=unless-stopped \
   --privileged \
   --name=lemes-rancher-2.6 \
   rancher/rancher:v2.5.12
+
+docker run -d --restart=unless-stopped \
+  -p 9080:80 -p 8443:443 \
+  --privileged \
+  --name=rancher \
+  rancher/rancher:v2.11.0
 ```
 
 
