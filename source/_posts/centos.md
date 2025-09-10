@@ -163,7 +163,128 @@ nvm install node
 
 ## docker
 
-[[docker#安装卸载]]
+## docker install
+
+```bash
+# 安装依赖
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# 设置 yum 源
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# 查看 docker 版本
+sudo yum list docker-ce --showduplicates | sort -r
+# 选取一个版本进行安装
+sudo yum install -y docker-ce-28.2.2
+# 启动 docker 并设置开机启动
+sudo systemctl enable --now docker
+```
+
+## docker install offline
+
+去 [docker 官网](https://download.docker.com/linux/static/stable/x86_64/) 下载对应的 docker 离线包, 并上传到服务器上
+
+```bash
+# 解压 docker 离线包
+tar -xzvf Docker\ 20.10.24.tgz
+# 将解压后的文件移动到 /usr/bin 目录下
+sudo cp docker/* /usr/bin/
+```
+
+通过 `sudo vim /usr/lib/systemd/system/containerd.service` 创建 `containerd.service` 文件, 内容如下
+
+```bash
+# Copyright The containerd Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[Unit]
+Description=containerd container runtime
+Documentation=https://containerd.io
+After=network.target dbus.service
+
+[Service]
+ExecStartPre=-/sbin/modprobe overlay
+ExecStart=/usr/bin/containerd
+
+Type=notify
+Delegate=yes
+KillMode=process
+Restart=always
+RestartSec=5
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Comment TasksMax if your systemd version does not supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+OOMScoreAdjust=-999
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+```bash
+# 启动并设置开机启动
+sudo systemctl enable --now containerd
+# 查看状态
+sudo systemctl status containerd
+```
+
+通过 `sudo vim /usr/lib/systemd/system/docker.service` 创建 `docker.service` 文件, 内容如下
+
+
+```yaml
+[Unit]
+Description=Docker Application Container Engine
+Documentation=http://docs.docker.com
+After=network.target docker.socket
+[Service]
+Type=notify
+EnvironmentFile=-/run/flannel/docker
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/bin/dockerd \
+                -H tcp://0.0.0.0:4243 \
+                -H unix:///var/run/docker.sock \
+                --selinux-enabled=false
+ExecReload=/bin/kill -s HUP $MAINPID
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+TimeoutStartSec=0
+Delegate=yes
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+# 启动并设置开机启动
+sudo systemctl enable --now docker
+# 检查状态
+sudo systemctl status docker
+```
+
+
+## docker uninstall
+
+```bash
+# 卸载
+sudo yum remove -y docker docker-ce docker-common docker-selinux docker-engine
+```
 
 ## docker-compose
 
@@ -698,6 +819,7 @@ sudo yum install -y iptables-services
 
 sudo systemctl start iptables
 
+sudo yum remove -y iptables-services
 ```
 
 # System setting

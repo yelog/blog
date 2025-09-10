@@ -275,7 +275,9 @@ use-forwarded-headers:true
 
 
 ### 容器删不掉
-docker stop/kill/rm -f 都不好使
+
+`docker stop/kill/rm -f` 都不好使
+
 ```bash
 # 找到进程
 $ ps axo stat,ppid,pid,comm | grep -w defunct
@@ -289,12 +291,14 @@ $ sudo systemctl restart docker
 ```
 
 ### 强制删除所有 terminating 的 pod
+
 ```bash
 kubectl get pods | grep Terminating | awk '{print $1}' | xargs -I {} kubectl delete pod {} --force --grace-period=0
 kubectl delete pod nginx-ingress-controller-lbftg --force --grace-period=0
 ```
 
 ### too many open files
+
 ```bash
 sudo vi /etc/sysctl.conf
 # 添加
@@ -353,22 +357,26 @@ docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)
 `docker exec -it $(docker ps -aq --filter "name=kubelet") /bin/sh`
 
 ### k8s 集群内 dns 生效(rancher)
+
 修改了宿主机的 dns 后，需要重启 docker 才能全体生效
 ```bash
 sudo systemctl restart docker
 ```
 
 ### 报错 x509: certificate is not valid for any names, but wanted to match ingress-nginx-controller-admission.ingress-nginx.svc
+
 ```bash
 kubectl delete -A ValidatingWebhookConfiguration foobar-ingress-nginx-admission
 ```
 
 ### network plugin is not ready: cni config uninitialized
+
 网络框架一直安装不上, 根据 `docker logs -f kubelet` 日志查看, 网络插件安装时报 `diskpress` 被放逐
 问题: /data 磁盘空间不足
 解决方案: 释放磁盘空间解决
 
 ### Pod ephemeral local storage usage exceeds the total limit of containers 4Gi.
+
 现象: pod被驱逐, 报错如题
 问题: 使用的临时容量超过了节点限制(在此节点上)
 
@@ -431,6 +439,7 @@ sudo sh -c "truncate -s 0 /data/docker/system/containers/*/*-json.log"
 
 
 ### 导入 lemes-web 出现问题
+
 Error from server (InternalError): error when creating "management-state/tmp/yaml-397511040": Internal error occurred: failed calling webhook "validate.nginx.ingress.kubernetes.io": Post "https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1/ingresses?timeout=10s": x509: certificate is not valid for any names, but wanted to match ingress-nginx-controller-admission.ingress-nginx.svc
 
 2024-10-28 导入 moss-web 时, 再次遇到:

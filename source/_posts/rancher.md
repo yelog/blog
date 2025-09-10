@@ -37,6 +37,11 @@ docker run -d --restart=unless-stopped \
   rancher/rancher:v2.11.0
 ```
 
+### 查看k8s环境缺少什么镜像
+
+```bash
+docker logs -f kubelet 2>&1 | grep "44:5000"
+```
 
 ## API
 
