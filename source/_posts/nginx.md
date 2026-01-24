@@ -119,3 +119,16 @@ server {
 ```
 ③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务
 ![通过https访问](https://cdn.jsdelivr.net/gh/yelog/assets/images/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png)
+
+## 常用场景
+
+### http 重定向到 https
+
+```properties
+server {
+    listen 80;
+
+}
+```
+
+

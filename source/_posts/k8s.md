@@ -156,6 +156,7 @@ sudo systemctl restart docker
 
 
 ## 使用Rancher
+
 ### deploy nfs
 ```bash
 sudo yum install -y nfs-utils rpcbind
@@ -180,6 +181,20 @@ gpgcheck=0
 EOF
 sudo yum install ceph-common
 ```
+### 强制删除 Node
+
+```bash
+# 查看所有节点
+> kubectl get nodes
+NAME          STATUS                        ROLES                      AGE    VERSION
+slphog5dnnf   NotReady,SchedulingDisabled   <none>                     328d   v1.20.15
+slpjl2qmkrt   Ready                         controlplane,etcd,worker   430d   v1.20.15
+slpombfxgah   Ready                         controlplane,etcd,worker   430d   v1.20.15
+# 根据节点名，强制删除节点
+kubectl delete node slphog5dnnf --force --grace-period=0
+```
+
+
 ### 部署 redis
 ```bash
 kubectl exec -it redis-cluster-0 -- redis-cli --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 {end}')
@@ -217,9 +232,35 @@ ceph-deploy osd create --data /dev/datavg/lv_data whulpdpms03
 ```
 
 
+### ingress
+
+#### 80重定向443
+
+`system` -> 配置映射 -> ingress-nginx-controller -> 增加如下内容
+```properties
+force-ssl-redirect: true
+ssl-redirect: true
+```
+
+#### 禁止iframe访问
+
+`system` -> 配置映射 -> ingress-nginx-controller -> 增加如下内容，支持 snippet
+```properties
+allow-snippet-annotations: true
+```
+`default` -> 负载均衡 -> lemes-gateway-ig/lemes-web-ig -> 升级 -> 标签/注释
+```properties
+nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header X-Xss-Protection "1; mode=block" always;
+      add_header Content-Security-Policy "default-src https: wss: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'self'" always;
+      add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+      add_header X-Content-Type-Options "nosniff" always;
+```
 
 ## Problem 问题记录
+
 ### Snippet directives are disabled by the Ingress administrator
+
 当应用如下配置时报错题目问题
 ```yaml
 # 暴露服务

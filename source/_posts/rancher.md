@@ -43,6 +43,30 @@ docker run -d --restart=unless-stopped \
 docker logs -f kubelet 2>&1 | grep "44:5000"
 ```
 
+### Rancher 平台证书更新
+
+根据如下命令查询证书有效时间
+```bash
+rancherName=lemes-rancher-2.5-prod
+docker exec -it ${rancherName} bash
+for i in $(ls /var/lib/rancher/k3s/server/tls/*.crt);do openssl x509 -enddate -noout -in $i; done
+```
+
+如果证书快过期了，可以使用下面的命令更新证书
+```bash
+docker exec -it ${rancherName} /bin/sh
+kubectl --insecure-skip-tls-verify -n kube-system delete secrets k3s-serving
+kubectl --insecure-skip-tls-verify delete secret serving-cert -n cattle-system
+rm -f /var/lib/rancher/k3s/server/tls/dynamic-cert.json
+```
+退出后重启 rancher
+```bash
+docker restart ${rancherName}
+curl --insecure -sfL https://localhost/v3
+docker restart ${rancherName}
+```
+
+
 ## API
 
 ### 升级镜像
@@ -53,4 +77,8 @@ curl -k -X PUT -H 'Accept: application/json' -H 'Accept: application/json' -H 'C
 ' 'https://10.176.66.20/v3/project/c-b62fg:p-rqhfd/workloads/deployment:default:lemes-auth'
 ```
 
+### rancher-agent x509: certificate has expired
 
+K8s 集群的 docker 重启后， rancher-agent 一致重启，报错 x509: certificate has expired
+
+原因: k8s 集群的服务器时间和 rancher 服务器时间不一致，同步一下时间
