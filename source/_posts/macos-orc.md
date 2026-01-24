@@ -12,6 +12,8 @@ tags:
 
 # 在 macOS 上做 OCR：从截屏到可点词的实践笔记
 
+![OCR](https://cdn.jsdelivr.net/gh/yelog/assets/images/202601241542345.png)
+
 最近在写一个 macOS 平台的快速翻译软件 SnapTra Translator，核心体验是“按住快捷键，把鼠标悬停在文字上就能看到翻译气泡”。这背后离不开 OCR：先把屏幕上一小块区域截下来，再用 Vision 把文字识别出来，最后根据光标位置选中最接近的单词。
 
 这篇文章把我在项目里的实践整理成一份“可落地”的 macOS OCR 指南：既讲思路，也给关键代码和避坑点。
