@@ -10,6 +10,8 @@ tags:
 - ant-design
 ---
 
+![antdv-next-admin](https://cdn.jsdelivr.net/gh/yelog/assets/images/202602241531080.png)
+
 做中后台项目，最容易“耗时间但不出成果”的，不是业务功能，而是重复的基础建设：登录鉴权、权限控制、菜单路由、表格表单、主题切换、国际化、Mock 联调。
 
 `antdv-next-admin` 就是为了解决这个问题而做的一个现代化脚手架：让你少花时间搭地基，把精力集中到真正有价值的业务实现上。
